@@ -1,0 +1,1 @@
+cmd_/home/kyyang/yan/drivers/10-lcd/lcd_sw_hw_setup/lcd_sw_hw.ko := arm-linux-ld -EL -r  -T /home/kyyang/yan/kernel/linux-2.6.38_Super/scripts/module-common.lds --build-id  -o /home/kyyang/yan/drivers/10-lcd/lcd_sw_hw_setup/lcd_sw_hw.ko /home/kyyang/yan/drivers/10-lcd/lcd_sw_hw_setup/lcd_sw_hw.o /home/kyyang/yan/drivers/10-lcd/lcd_sw_hw_setup/lcd_sw_hw.mod.o

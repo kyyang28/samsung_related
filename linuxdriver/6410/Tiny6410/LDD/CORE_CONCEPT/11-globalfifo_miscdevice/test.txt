@@ -1,0 +1,4 @@
+1. 	insmod globalfifo.ko
+2.	./globalfifo_test &
+3.	echo hello world > /dev/globalfifo
+4.	echo whatever > /dev/globalfifo

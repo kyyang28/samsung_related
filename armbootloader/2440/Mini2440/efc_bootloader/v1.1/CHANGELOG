@@ -1,0 +1,7 @@
+
+Author: Charles Yang <charlesyang28@gmail.com>
+Date:	Thur Oct 4 01:01:55 2012
+
+    Adding System.c file in order to enable icache
+    Adding icache_enable() function in Board.c file at line 90
+    

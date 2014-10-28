@@ -1,0 +1,145 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+APLLCON_VAL	s3c6410_regs.h	27;"	d
+APLL_CON	s3c6410_regs.h	13;"	d
+APLL_LOCK	s3c6410_regs.h	10;"	d
+APLL_SDIV	s3c6410_regs.h	24;"	d
+ARM_RATIO	s3c6410_regs.h	34;"	d
+CC	Makefile	/^CC = $(CROSS_COMPILE)gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -DBOOT_FROM_NAND $/;"	m
+CLK_DIV0	s3c6410_regs.h	18;"	d
+CLK_SRC	s3c6410_regs.h	17;"	d
+COBJS	Makefile	/^COBJS = start.o$/;"	m
+CROSS_COMPILE	Makefile	/^CROSS_COMPILE = arm-linux-$/;"	m
+EINT0CON0	s3c6410_regs.h	67;"	d
+EINT0MASK	s3c6410_regs.h	68;"	d
+EINT0PEND	s3c6410_regs.h	69;"	d
+ENABLE_FIFO	s3c6410_regs.h	108;"	d
+EPLL_CON0	s3c6410_regs.h	15;"	d
+EPLL_CON1	s3c6410_regs.h	16;"	d
+EPLL_LOCK	s3c6410_regs.h	12;"	d
+GPACON	s3c6410_regs.h	106;"	d
+GPMCON	s3c6410_regs.h	5;"	d
+GPMDAT	s3c6410_regs.h	6;"	d
+GPMPUD	s3c6410_regs.h	7;"	d
+GPNCON	s3c6410_regs.h	64;"	d
+GPNDAT	s3c6410_regs.h	65;"	d
+HCLK	s3c6410_regs.h	60;"	d
+HCLKX2_RATIO	s3c6410_regs.h	31;"	d
+HCLK_RATIO	s3c6410_regs.h	32;"	d
+LD	Makefile	/^LD = $(CROSS_COMPILE)ld$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS = -Ttext 0x0c000000 $/;"	m
+MDIV	s3c6410_regs.h	22;"	d
+MEM_SYS_CFG	s3c6410_regs.h	58;"	d
+MPLLCON_VAL	s3c6410_regs.h	28;"	d
+MPLL_CON	s3c6410_regs.h	14;"	d
+MPLL_LOCK	s3c6410_regs.h	11;"	d
+MPLL_RATIO	s3c6410_regs.h	33;"	d
+MPLL_SDIV	s3c6410_regs.h	25;"	d
+NS2CLOCK	s3c6410_regs.h	61;"	d
+OBJCOPY	Makefile	/^OBJCOPY = $(CROSS_COMPILE)objcopy$/;"	m
+OBJDUMP	Makefile	/^OBJDUMP = $(CROSS_COMPILE)objdump$/;"	m
+OTHERS	s3c6410_regs.h	19;"	d
+P1CASLAT	s3c6410_regs.h	42;"	d
+P1DIRECTCMD	s3c6410_regs.h	39;"	d
+P1MEMCCMD	s3c6410_regs.h	38;"	d
+P1MEMCFG	s3c6410_regs.h	40;"	d
+P1MEMCFG2	s3c6410_regs.h	56;"	d
+P1MEMSTAT	s3c6410_regs.h	37;"	d
+P1REFRESH	s3c6410_regs.h	41;"	d
+P1T_DQSS	s3c6410_regs.h	43;"	d
+P1T_ESR	s3c6410_regs.h	55;"	d
+P1T_MRD	s3c6410_regs.h	44;"	d
+P1T_RAS	s3c6410_regs.h	45;"	d
+P1T_RC	s3c6410_regs.h	46;"	d
+P1T_RCD	s3c6410_regs.h	47;"	d
+P1T_RFC	s3c6410_regs.h	48;"	d
+P1T_RP	s3c6410_regs.h	49;"	d
+P1T_RRD	s3c6410_regs.h	50;"	d
+P1T_WR	s3c6410_regs.h	51;"	d
+P1T_WTR	s3c6410_regs.h	52;"	d
+P1T_XP	s3c6410_regs.h	53;"	d
+P1T_XSR	s3c6410_regs.h	54;"	d
+P1_chip_0_cfg	s3c6410_regs.h	57;"	d
+PCLK_RATIO	s3c6410_regs.h	30;"	d
+PDIV	s3c6410_regs.h	23;"	d
+PLL_ENABLE	s3c6410_regs.h	26;"	d
+PRIORITY	s3c6410_regs.h	70;"	d
+SERVICE	s3c6410_regs.h	71;"	d
+SERVICEPEND	s3c6410_regs.h	72;"	d
+TARGET	Makefile	/^TARGET = keyuartint_vectored$/;"	m
+TX_BUF_LEN	uart.c	61;"	d	file:
+UBRDIV0	s3c6410_regs.h	101;"	d
+UCON0	s3c6410_regs.h	94;"	d
+UDIVSLOT0	s3c6410_regs.h	102;"	d
+UFCON0	s3c6410_regs.h	95;"	d
+UFSTAT0	s3c6410_regs.h	98;"	d
+UINTM0	s3c6410_regs.h	104;"	d
+UINTP0	s3c6410_regs.h	103;"	d
+ULCON0	s3c6410_regs.h	93;"	d
+UMCON0	s3c6410_regs.h	96;"	d
+URXH0	s3c6410_regs.h	100;"	d
+UTRSTAT0	s3c6410_regs.h	97;"	d
+UTXH0	s3c6410_regs.h	99;"	d
+VIC0ADDRESS	s3c6410_regs.h	89;"	d
+VIC0FIQSTATUS	s3c6410_regs.h	76;"	d
+VIC0INTENABLE	s3c6410_regs.h	79;"	d
+VIC0INTENCLEAR	s3c6410_regs.h	81;"	d
+VIC0INTSELECT	s3c6410_regs.h	78;"	d
+VIC0IRQSTATUS	s3c6410_regs.h	74;"	d
+VIC0PRIORITYDAISY	s3c6410_regs.h	84;"	d
+VIC0PROTECTION	s3c6410_regs.h	82;"	d
+VIC0RAWINTR	s3c6410_regs.h	77;"	d
+VIC0SWPRIORITYMASK	s3c6410_regs.h	83;"	d
+VIC0VECTADDR0	s3c6410_regs.h	86;"	d
+VIC0VECTADDR1	s3c6410_regs.h	87;"	d
+VIC1ADDRESS	s3c6410_regs.h	90;"	d
+VIC1INTENABLE	s3c6410_regs.h	80;"	d
+VIC1IRQSTATUS	s3c6410_regs.h	75;"	d
+VIC1VECTADDR5	s3c6410_regs.h	88;"	d
+__S3C6410_REGS_H	s3c6410_regs.h	2;"	d
+_data_abort	start.S	/^_data_abort:			.word data_abort$/;"	l
+_fiq	start.S	/^_fiq:					.word fiq$/;"	l
+_irq	start.S	/^_irq:					.word irq$/;"	l
+_not_used	start.S	/^_not_used:				.word not_used$/;"	l
+_prefetch_abort	start.S	/^_prefetch_abort:		.word prefetch_abort$/;"	l
+_software_interrupt	start.S	/^_software_interrupt:	.word software_interrupt$/;"	l
+_start	start.S	/^_start:	$/;"	l
+_undefined_instruction	start.S	/^_undefined_instruction:	.word undefined_instruction$/;"	l
+data_abort	start.S	/^data_abort:$/;"	l
+do_irq	irq.c	/^void do_irq(void)$/;"	f
+do_uart_irq	uart.c	/^void do_uart_irq(void)$/;"	f
+eint0_3_isr	irq.c	/^void eint0_3_isr(void)$/;"	f
+eint4_11_isr	irq.c	/^void eint4_11_isr(void)$/;"	f
+fiq	start.S	/^fiq:$/;"	l
+getData	uart.c	/^static int getData(unsigned char *pdata)$/;"	f	file:
+infinite_loop	start.S	/^infinite_loop:$/;"	l
+irq	start.S	/^irq:$/;"	l
+irq_init	irq.c	/^void irq_init(void)$/;"	f
+isEmpty	uart.c	/^static int isEmpty(void)$/;"	f	file:
+isFull	uart.c	/^static int isFull(void)$/;"	f	file:
+key_irq_init	irq.c	/^void key_irq_init(void)$/;"	f
+led_init	led.c	/^void led_init(void)$/;"	f
+led_off	led.c	/^void led_off(int num)$/;"	f
+led_on	led.c	/^void led_on(int num)$/;"	f
+myuartint	main.c	/^int myuartint(void)$/;"	f
+not_used	start.S	/^not_used:$/;"	l
+prefetch_abort	start.S	/^prefetch_abort:$/;"	l
+putData	uart.c	/^static int putData(unsigned char data)$/;"	f	file:
+r_idx	uart.c	/^static unsigned int r_idx = 0;$/;"	v	file:
+software_interrupt	start.S	/^software_interrupt:$/;"	l
+start_code	start.S	/^start_code:$/;"	l
+txbuf	uart.c	/^static unsigned char txbuf[2047];$/;"	v	file:
+uart_getc	uart.c	/^unsigned char uart_getc(void)$/;"	f
+uart_init	uart.c	/^void uart_init(void)$/;"	f
+uart_irq	irq.c	/^void uart_irq(void)$/;"	f
+uart_irq_init	irq.c	/^void uart_irq_init(void)$/;"	f
+uart_putc	uart.c	/^void uart_putc(char c)$/;"	f
+uart_tx_int_disable	uart.c	/^void uart_tx_int_disable(void)$/;"	f
+uart_tx_int_enable	uart.c	/^void uart_tx_int_enable(void)$/;"	f
+undefined_instruction	start.S	/^undefined_instruction:$/;"	l
+w_idx	uart.c	/^static unsigned int w_idx = 0;$/;"	v	file:

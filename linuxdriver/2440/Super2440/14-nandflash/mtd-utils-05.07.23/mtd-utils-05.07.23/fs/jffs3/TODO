@@ -1,0 +1,82 @@
+ * $Id: TODO,v 3.8 2005/01/05 16:16:52 dedekind Exp $
+
+ - support asynchronous operation -- add a per-fs 'reserved_space' count,
+   let each outstanding write reserve the _maximum_ amount of physical
+   space it could take. Let GC flush the outstanding writes because the
+   reservations will necessarily be pessimistic. With this we could even
+   do shared writable mmap, if we can have a fs hook for do_wp_page() to
+   make the reservation.
+ - disable compression in commit_write()?
+ - fine-tune the allocation / GC thresholds
+ - chattr support - turning on/off and tuning compression per-inode
+ - checkpointing (do we need this? scan is quite fast)
+ - make the scan code populate real inodes so read_inode just after 
+	mount doesn't have to read the flash twice for large files.
+	Make this a per-inode option, changable with chattr, so you can
+	decide which inodes should be in-core immediately after mount.
+ - test, test, test
+
+ - NAND flash support:
+	- almost done :)
+	- use bad block check instead of the hardwired byte check
+
+ - Optimisations:
+   - Split writes so they go to two separate blocks rather than just c->nextblock.
+	By writing _new_ nodes to one block, and garbage-collected REF_PRISTINE
+	nodes to a different one, we can separate clean nodes from those which
+	are likely to become dirty, and end up with blocks which are each far
+	closer to 100% or 0% clean, hence speeding up later GC progress dramatically.
+   - Stop keeping name in-core with struct jffs3_full_dirent. If we keep the hash in 
+     the full dirent, we only need to go to the flash in lookup() when we think we've
+     got a match, and in readdir(). 
+   - Doubly-linked next_in_ino list to allow us to free obsoleted raw_node_refs immediately?
+   - Remove totlen from jffs3_raw_node_ref? Need to have totlen passed into
+	jffs3_mark_node_obsolete(). Can all callers work it out?
+   - Remove size from jffs3_raw_node_frag. 
+
+   Joakim Tjernlund <joakim.tjernlund@lumentis.se>  Thu, 16 Dec 2004 14:20:43:
+   - Consider another checksum algorithm. Crc32 is very expensive
+     and JFFS2 suffered severely in the early days. Now that crc32 is
+     very optimized that problem is less visible, but crc32 is still
+     expensive. Maybe an Adler32 checksum is good enough or a crc16?
+   - Don't calculate a Adler32 checksum when compressing with zlib.
+     JFFS2 already has its own checksum.
+   - Consider changing the start seed to crc from 0 to -1. Zero
+     is not a good start seed for crc
+
+   - Currently when JFFS3 finds any CRC error it prints warning message. This is right from one
+     hand. CRC errors may appear because of unclean reboots (1) and flash media corruptions (2).
+     Unclean reboots happen rather often and, as result, one node may have CRC error (JFFS2 was in
+     the middle of writing it when was rebooted uncleanly). Bu JFFS2 still prints CRC error warning.
+     That makes users worry. So, it is good to detect such situations and not to print the CRC error
+     warning message. Possibly, we may not print that if the bogus node is the last node in the current
+     block (may there be one more bogus node in the same block, if there were several consequent
+     unclean reboots? - not sure ...)
+
+   - Would be nice to reformat sources and keep lines length < 80
+     characters. Currently it is hard to read JFFS3 sources 80xX
+     terminals.
+
+   - __totlen elimination: when adding obsolete nodes, we just allocate
+     new node_ref and call add_physical_node_ref. That is sux. It
+     doesn't merge obsolete nodes. Fix it.
+     Wasted space accounting is broken. Pads are treated as dirty with
+     new changes. Fix it. 
+
+   - Summaries:
+     1. In get_inode_nodes - do not check nodes CRC if their block
+	contains summary node (when checking).
+     2. For NOR do not check nodes CRC at all (never) when there is summary in
+	the block.
+     3. For NOR summaries needed either (not only for NAND). But for not
+	- no need to keep lots of information in summaries. May be just
+	  keep summary only header (no data), may be keep only
+	  referenced to nodes within the block. Anyway, most important
+	  is just to know that there is summary at the end of block. In
+	  this case we may be sure that there was no unclean reboot when
+	  this block was written, and we may trust this block - that
+	  means we may not check CRCs there.
+
+   - Wasted space: treat pads as wasted only if their size > ISDIRTY
+     (__flush_wbuf).
+

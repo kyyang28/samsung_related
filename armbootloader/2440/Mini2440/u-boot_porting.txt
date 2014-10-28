@@ -1,0 +1,68 @@
+
+set ipaddr 192.168.1.230
+
+set ethaddr 00:0c:29:7d:a7:06
+
+set serverip 192.168.1.101
+
+
+/* Operating on u-boot */
+tftp 30000000 u-boot.bin
+tftp 30000000 u-boot_new.bin
+nand erase.part u-boot
+nand write 30000000 u-boot
+
+/* Operating on kernel */
+tftp 30000000 uImage_done
+tftp 30000000 uImage_new
+nand erase.part kernel
+nand write 30000000 kernel
+
+/* Operating on rootfs(jffs2) */
+tftp 30000000 fs_mini_mdev_new.jffs2
+nand erase.part rootfs
+nand write.jffs2 30000000 0x00260000 3b8e30
+
+tftp 30000000 fs_mini_mdev.jffs2
+nand erase.part rootfs
+nand write.jffs2 30000000 0x00260000 5b89a8
+
+/* Setup the bootargs for jffs2 */
+set bootargs console=ttySAC0 root=/dev/mtdblock3 rootfstype=jffs2
+
+
+/* Operating on rootfs(yaffs2) */
+tftp 30000000 fs_mini_mdev.yaffs2
+nand erase.part rootfs
+nand write.yaffs 30000000 0x00260000 889bc0
+
+tftp 30000000 fs_mini_mdev_new.yaffs2
+nand erase.part rootfs
+nand write.yaffs 30000000 0x00260000 791340
+
+
+set bootargs console=ttySAC0 root=/dev/mtdblock3 rootfstype=jffs2
+set bootargs console=ttySAC0 root=/dev/mtdblock3 rootfstype=yaffs
+
+/* Updating u-boot */
+tftp 30000000 u-boot.bin;protect off all;erase 0 3ffff;cp.b 30000000 0 40000
+tftp 30000000 u-boot_new.bin;protect off all;erase 0 3ffff;cp.b 30000000 0 40000
+
+
+nfs 30000000 192.168.1.102:/home/kyyang/yan/nfs/nfsroot/mini2440/uImage_done
+
+set bootcmd 'nand read 30000000 kernel;bootm 30000000'
+
+
+/* Kernel MTD partitions */
+Creating 4 MTD partitions on "NAND 256MiB 3,3V 8-bit":
+0x00000000-0x00040000 : "bootloader"
+0x00040000-0x00060000 : "params"
+0x00060000-0x00260000 : "kernel"
+0x00260000-0x10000000 : "root"
+
+
+执行nand erase.part kernel前，要先执行mtdparts default，否则nand执行操作会失败
+
+
+

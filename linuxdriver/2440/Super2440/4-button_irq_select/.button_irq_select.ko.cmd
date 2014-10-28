@@ -1,0 +1,1 @@
+cmd_/home/kyyang/yan/drivers/4-button_irq_select/button_irq_select.ko := arm-linux-ld -EL -r  -T /home/kyyang/yan/kernel/linux-2.6.38_Super/scripts/module-common.lds --build-id  -o /home/kyyang/yan/drivers/4-button_irq_select/button_irq_select.ko /home/kyyang/yan/drivers/4-button_irq_select/button_irq_select.o /home/kyyang/yan/drivers/4-button_irq_select/button_irq_select.mod.o

@@ -1,0 +1,32 @@
+
+在开发板上:
+
+测试一：
+1. insmod mini2440_ramdisk.ko
+2. 格式化mkdosfs /dev/mini2440_ramblock
+3. 挂载mount -t vfat /dev/mini2440_ramblock /mnt
+4. cd /mnt
+5. echo hello > hello.txt
+6. cd ..
+7. umount /mnt
+8. mount -t vfat /dev/mini2440_ramblock /mnt
+9. cat /mnt/hello.txt   
+
+(分区fdisk /dev/ramblock)
+
+
+测试二：
+1. insmod ramdisk.ko
+2. 格式化: mkfs.ext2 /dev/ramdisk
+3. 挂接: mount /dev/ramdisk /tmp/
+4. 读写文件: cd /tmp
+	 echo hello > hello.txt	
+5. cd /; umount /tmp/
+6. cat /dev/ramdisk > /mnt/ramdisk.bin
+
+在PC上查看ramdisk.bin
+   sudo mount -o loop ramdisk.bin /mnt
+   cd /mnt
+   ls
+   cat hello.txt
+

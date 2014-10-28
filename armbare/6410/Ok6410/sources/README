@@ -1,0 +1,22 @@
+
+/*  
+ *	Referenced by Internal_ROM_Booting.pdf
+ */
+
+STEP1:	sudo fdisk /dev/sdb -l
+
+Disk /dev/sdb: 1977 MB, 1977614336 bytes
+177 heads, 13 sectors/track, 1678 cylinders, total 3862528 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+	I/O size (minimum/optimal): 512 bytes / 512 bytes
+	Disk identifier: 0x00000000
+    Device Boot          Start         End        Blocks      Id      System
+	/dev/sdb1             128        3657855      1828864    b  W95    FAT32
+
+STEP2:	the copy address is 1977614336 - 18*512 = 1977605120
+
+STEP3:	sudo dd if=led.bin of=/dev/sdb seek=1977605120 bs=1
+
+STEP4:	umount /media/EA75-225D
+

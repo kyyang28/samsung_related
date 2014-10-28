@@ -1,0 +1,11 @@
+
+测试过程：
+
+1. 	insmod globalfifo.ko
+2.	cat /dev/globalfifo &	/* 后台执行 */
+3.	echo "ARM Linux" > /dev/globalfifo
+4.	echo "Linux Fans" > /dev/globalfifo
+
+现象：
+每当echo(写)一个字符串到/dev/globalfifo设备节点的时候，cat(读)就会立刻读出这个字符串
+

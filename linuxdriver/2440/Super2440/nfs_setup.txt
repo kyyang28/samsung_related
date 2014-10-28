@@ -1,0 +1,14 @@
+1.	首先需要安装nfs服务的相关软件包
+		sudo apt-get install nfs-kernel-server
+			
+2.	创建nfs的存取目录rootfs，并修改其目录的权限
+		$ sudo mkdir /rootfs
+		$ sudo chmod -R 777 /rootfs
+		$ sudo chown -R nobody /rootfs
+		
+3.	配置要输出的目录，可以在 /etc/exports 文件中添加该目录
+		/rootfs  *(rw,no_root_squash,subtree_check,async)
+		
+4.	重新启动nfs服务
+		sudo /etc/init.d/nfs-kernel-server restart
+		

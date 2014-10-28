@@ -1,0 +1,12 @@
+
+ls /dev/mtd*
+
+insmod s3c_nand.ko
+
+ls /dev/mtd*
+
+mount -t yaffs /dev/mtdblock3 /mnt
+
+cd /mnt
+
+ls

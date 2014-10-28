@@ -1,0 +1,57 @@
+
+On board
+1. 	insmod tiny6410_wdt_dev.ko
+		insmod tiny6410_wdt_drv.ko
+
+
+¡¾i¡¿Testing case 1:
+			
+			Typing:
+			
+			echo 0 > /dev/watchdog
+			
+			Phenomenon:	The system is restarted.	
+			
+			
+¡¾ii¡¿Testing case 2:
+			
+			Typing:
+			
+			echo V > /dev/watchdog
+			
+			Phenomenon:	The system is not restarted.	
+
+
+¡¾iii¡¿Testing case 3:
+		
+		 	a)	./tiny6410_wdt_test /dev/watchdog 3 5		(feeddog_period = 3, watchdog reset_period = 5)
+		 			Phenomenon: Wait 5 secs, the system is not restarted, 
+		 									since the feeddog period is less than the restart period
+		 	
+		 	b)	press ¡¾ctrl + z¡¿ or ¡¾ctrl + c¡¿
+		 			Phenomenon: The system is not restarted either, since the signal function invokes 
+		 									the "write" system call, which writes a 'V' to the system to stop the watchdog timer.
+ 			
+¡¾iv¡¿Testing case 4:
+	
+			./tiny6410_wdt_test /dev/watchdog 5 3			(feeddog_period = 5, watchdog reset_period = 3)	
+		
+			Phenomenon:	The system is restarted, since the watchdog reset_period is less than the feeddog_period.
+
+			
+¡¾v¡¿Testing case 5:	
+				a)	./tiny6410_wdt_test /dev/watchdog 3 5	&	(feeddog_period = 3, watchdog reset_period = 5)
+						Background executing tiny6410_wdt_test program
+				
+				b)	Typing
+						
+						killall tiny6410_wdt_test 
+						
+						or 
+						
+						kill -9 pid(tiny6410_wdt_test)
+						
+						Phenomenon:	The system is restarted, since the kill or killall command terminates 
+												the feeddog program(tiny6410_wdt_test), but the watchdog timer is not stopped,
+												so after 5 secs, the system is restarted.
+

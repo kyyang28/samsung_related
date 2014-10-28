@@ -1,0 +1,270 @@
+
+leddrv.ko:     file format elf32-littlearm
+
+Disassembly of section .note.gnu.build-id:
+
+00000000 <.note.gnu.build-id>:
+   0:	00000004 	andeq	r0, r0, r4
+   4:	00000014 	andeq	r0, r0, r4, lsl r0
+   8:	00000003 	andeq	r0, r0, r3
+   c:	00554e47 	subseq	r4, r5, r7, asr #28
+  10:	c8346c87 	ldmdagt	r4!, {r0, r1, r2, r7, sl, fp, sp, lr}
+  14:	ddfde74b 	ldclle	7, cr14, [sp, #300]!
+  18:	a460739b 	strbtge	r7, [r0], #-923
+  1c:	4af55783 	bmi	ffd55e30 <init_module+0xffd55cac>
+  20:	37b26245 	ldrcc	r6, [r2, r5, asr #4]!
+Disassembly of section .text:
+
+00000000 <leddrv_open>:
+   0:	e1a0c00d 	mov	ip, sp
+   4:	e92dd810 	push	{r4, fp, ip, lr, pc}
+   8:	e24cb004 	sub	fp, ip, #4	; 0x4
+   c:	e59f4044 	ldr	r4, [pc, #68]	; 58 <leddrv_open+0x58>
+  10:	e3a00000 	mov	r0, #0	; 0x0
+  14:	e5941000 	ldr	r1, [r4]
+  18:	e5913000 	ldr	r3, [r1]		// 在这里出错
+  
+  
+  1c:	e3c33a03 	bic	r3, r3, #12288	; 0x3000
+  20:	e5813000 	str	r3, [r1]
+  24:	e5912000 	ldr	r2, [r1]
+  28:	e3822a01 	orr	r2, r2, #4096	; 0x1000
+  2c:	e5812000 	str	r2, [r1]
+  30:	e594c004 	ldr	ip, [r4, #4]
+  34:	e59c3000 	ldr	r3, [ip]
+  38:	e3c33603 	bic	r3, r3, #3145728	; 0x300000
+  3c:	e3c3300f 	bic	r3, r3, #15	; 0xf
+  40:	e58c3000 	str	r3, [ip]
+  44:	e59c2000 	ldr	r2, [ip]
+  48:	e3822601 	orr	r2, r2, #1048576	; 0x100000
+  4c:	e3822005 	orr	r2, r2, #5	; 0x5
+  50:	e58c2000 	str	r2, [ip]
+  54:	e89da810 	ldm	sp, {r4, fp, sp, pc}
+  58:	00000000 	.word	0x00000000
+
+0000005c <cleanup_module>:
+  5c:	e1a0c00d 	mov	ip, sp
+  60:	e92dd830 	push	{r4, r5, fp, ip, lr, pc}
+  64:	e24cb004 	sub	fp, ip, #4	; 0x4
+  68:	e59f403c 	ldr	r4, [pc, #60]	; ac <cleanup_module+0x50>
+  6c:	e3a02c01 	mov	r2, #256	; 0x100
+  70:	e59f3038 	ldr	r3, [pc, #56]	; b0 <cleanup_module+0x54>
+  74:	e5940008 	ldr	r0, [r4, #8]
+  78:	e3a01000 	mov	r1, #0	; 0x0
+  7c:	ebfffffe 	bl	0 <__unregister_chrdev>
+  80:	e5941008 	ldr	r1, [r4, #8]
+  84:	e594000c 	ldr	r0, [r4, #12]
+  88:	e1a01a01 	lsl	r1, r1, #20
+  8c:	ebfffffe 	bl	0 <device_destroy>
+  90:	e594000c 	ldr	r0, [r4, #12]
+  94:	ebfffffe 	bl	0 <class_destroy>
+  98:	e5940000 	ldr	r0, [r4]
+  9c:	ebfffffe 	bl	0 <__iounmap>
+  a0:	e5940004 	ldr	r0, [r4, #4]
+  a4:	ebfffffe 	bl	0 <__iounmap>
+  a8:	e89da830 	ldm	sp, {r4, r5, fp, sp, pc}
+	...
+
+000000b4 <leddrv_write>:
+  b4:	e1a0c00d 	mov	ip, sp
+  b8:	e92dd800 	push	{fp, ip, lr, pc}
+  bc:	e24cb004 	sub	fp, ip, #4	; 0x4
+  c0:	e24dd008 	sub	sp, sp, #8	; 0x8
+  c4:	e1a0000d 	mov	r0, sp
+  c8:	e3c03d7f 	bic	r3, r0, #8128	; 0x1fc0
+  cc:	e3c3303f 	bic	r3, r3, #63	; 0x3f
+  d0:	e5930008 	ldr	r0, [r3, #8]
+  d4:	e091c002 	adds	ip, r1, r2
+  d8:	30dcc000 	sbcscc	ip, ip, r0
+  dc:	33a00000 	movcc	r0, #0	; 0x0
+  e0:	e3500000 	cmp	r0, #0	; 0x0
+  e4:	0a000022 	beq	174 <leddrv_write+0xc0>
+  e8:	e3520000 	cmp	r2, #0	; 0x0
+  ec:	1a00000f 	bne	130 <leddrv_write+0x7c>
+  f0:	e51b3010 	ldr	r3, [fp, #-16]
+  f4:	e3530001 	cmp	r3, #1	; 0x1
+  f8:	0a000012 	beq	148 <leddrv_write+0x94>
+  fc:	e59f007c 	ldr	r0, [pc, #124]	; 180 <leddrv_write+0xcc>
+ 100:	e5902010 	ldr	r2, [r0, #16]
+ 104:	e5923000 	ldr	r3, [r2]
+ 108:	e3c33040 	bic	r3, r3, #64	; 0x40
+ 10c:	e5823000 	str	r3, [r2]
+ 110:	e5901014 	ldr	r1, [r0, #20]
+ 114:	e5913000 	ldr	r3, [r1]
+ 118:	e3c33b01 	bic	r3, r3, #1024	; 0x400
+ 11c:	e3c33003 	bic	r3, r3, #3	; 0x3
+ 120:	e5813000 	str	r3, [r1]
+ 124:	e3a00000 	mov	r0, #0	; 0x0
+ 128:	e24bd00c 	sub	sp, fp, #12	; 0xc
+ 12c:	e89da800 	ldm	sp, {fp, sp, pc}
+ 130:	e1a01002 	mov	r1, r2
+ 134:	e24b0010 	sub	r0, fp, #16	; 0x10
+ 138:	ebfffffe 	bl	0 <__memzero>
+ 13c:	e51b3010 	ldr	r3, [fp, #-16]
+ 140:	e3530001 	cmp	r3, #1	; 0x1
+ 144:	1affffec 	bne	fc <leddrv_write+0x48>
+ 148:	e59f0030 	ldr	r0, [pc, #48]	; 180 <leddrv_write+0xcc>
+ 14c:	e5902010 	ldr	r2, [r0, #16]
+ 150:	e5923000 	ldr	r3, [r2]
+ 154:	e3833040 	orr	r3, r3, #64	; 0x40
+ 158:	e5823000 	str	r3, [r2]
+ 15c:	e5901014 	ldr	r1, [r0, #20]
+ 160:	e5913000 	ldr	r3, [r1]
+ 164:	e3833b01 	orr	r3, r3, #1024	; 0x400
+ 168:	e3833003 	orr	r3, r3, #3	; 0x3
+ 16c:	e5813000 	str	r3, [r1]
+ 170:	eaffffeb 	b	124 <leddrv_write+0x70>
+ 174:	e24b0010 	sub	r0, fp, #16	; 0x10
+ 178:	ebfffffe 	bl	0 <__copy_from_user>
+ 17c:	eaffffdb 	b	f0 <leddrv_write+0x3c>
+ 180:	00000000 	.word	0x00000000
+
+00000184 <init_module>:
+ 184:	e1a0c00d 	mov	ip, sp
+ 188:	e92dd810 	push	{r4, fp, ip, lr, pc}
+ 18c:	e24cb004 	sub	fp, ip, #4	; 0x4
+ 190:	e24dd00c 	sub	sp, sp, #12	; 0xc
+ 194:	e59fc090 	ldr	ip, [pc, #144]	; 22c <init_module+0xa8>
+ 198:	e3a00000 	mov	r0, #0	; 0x0
+ 19c:	e1a01000 	mov	r1, r0
+ 1a0:	e3a02c01 	mov	r2, #256	; 0x100
+ 1a4:	e59f3084 	ldr	r3, [pc, #132]	; 230 <init_module+0xac>
+ 1a8:	e58dc000 	str	ip, [sp]
+ 1ac:	ebfffffe 	bl	0 <__register_chrdev>
+ 1b0:	e59f407c 	ldr	r4, [pc, #124]	; 234 <init_module+0xb0>
+ 1b4:	e59f1074 	ldr	r1, [pc, #116]	; 230 <init_module+0xac>
+ 1b8:	e5840008 	str	r0, [r4, #8]
+ 1bc:	e2842018 	add	r2, r4, #24	; 0x18
+ 1c0:	e59f0070 	ldr	r0, [pc, #112]	; 238 <init_module+0xb4>
+ 1c4:	ebfffffe 	bl	0 <__class_create>
+ 1c8:	e3700a01 	cmn	r0, #4096	; 0x1000
+ 1cc:	e584000c 	str	r0, [r4, #12]
+ 1d0:	81a00000 	movhi	r0, r0
+ 1d4:	8a000012 	bhi	224 <init_module+0xa0>
+ 1d8:	e5942008 	ldr	r2, [r4, #8]
+ 1dc:	e3a01000 	mov	r1, #0	; 0x0
+ 1e0:	e59fc054 	ldr	ip, [pc, #84]	; 23c <init_module+0xb8>
+ 1e4:	e1a03001 	mov	r3, r1
+ 1e8:	e1a02a02 	lsl	r2, r2, #20
+ 1ec:	e58dc000 	str	ip, [sp]
+ 1f0:	ebfffffe 	bl	0 <device_create>
+ 1f4:	e59f3044 	ldr	r3, [pc, #68]	; 240 <init_module+0xbc>
+ 1f8:	e59fc044 	ldr	ip, [pc, #68]	; 244 <init_module+0xc0>
+ 1fc:	e59f0044 	ldr	r0, [pc, #68]	; 248 <init_module+0xc4>
+ 200:	e3a0100c 	mov	r1, #12	; 0xc
+ 204:	e3a02000 	mov	r2, #0	; 0x0
+ 208:	e5843000 	str	r3, [r4]
+ 20c:	e584c010 	str	ip, [r4, #16]
+ 210:	ebfffffe 	bl	0 <__arm_ioremap>
+ 214:	e2803004 	add	r3, r0, #4	; 0x4
+ 218:	e5840004 	str	r0, [r4, #4]
+ 21c:	e5843014 	str	r3, [r4, #20]
+ 220:	e3a00000 	mov	r0, #0	; 0x0
+ 224:	e24bd010 	sub	sp, fp, #16	; 0x10
+ 228:	e89da810 	ldm	sp, {r4, fp, sp, pc}
+	...
+ 23c:	00000008 	.word	0x00000008
+ 240:	56000050 	.word	0x56000050
+ 244:	56000054 	.word	0x56000054
+ 248:	56000060 	.word	0x56000060
+Disassembly of section .modinfo:
+
+00000000 <__mod_license99>:
+   0:	6563696c 	strbvs	r6, [r3, #-2412]!
+   4:	3d65736e 	stclcc	3, cr7, [r5, #-440]!
+   8:	004c5047 	subeq	r5, ip, r7, asr #32
+
+0000000c <__module_depends>:
+   c:	65706564 	.word	0x65706564
+  10:	3d73646e 	.word	0x3d73646e
+	...
+
+00000015 <__mod_vermagic5>:
+  15:	76          	.byte	0x76
+  16:	7265      	.short	0x7265
+  18:	6967616d 	.word	0x6967616d
+  1c:	2e323d63 	.word	0x2e323d63
+  20:	38332e36 	.word	0x38332e36
+  24:	6168432d 	.word	0x6168432d
+  28:	73656c72 	.word	0x73656c72
+  2c:	6d20592e 	.word	0x6d20592e
+  30:	755f646f 	.word	0x755f646f
+  34:	616f6c6e 	.word	0x616f6c6e
+  38:	52412064 	.word	0x52412064
+  3c:	2034764d 	.word	0x2034764d
+  40:	00000000 	.word	0x00000000
+Disassembly of section .rodata.str1.4:
+
+00000000 <.rodata.str1.4>:
+   0:	6464656c 	strbtvs	r6, [r4], #-1388
+   4:	00007672 	andeq	r7, r0, r2, ror r6
+   8:	0064656c 	rsbeq	r6, r4, ip, ror #10
+Disassembly of section .data:
+
+00000000 <leddrv_fops>:
+	...
+Disassembly of section .gnu.linkonce.this_module:
+
+00000000 <__this_module>:
+	...
+   c:	6464656c 	.word	0x6464656c
+  10:	00007672 	.word	0x00007672
+	...
+Disassembly of section .bss:
+
+00000000 <rGPFCON>:
+   0:	00000000 	.word	0x00000000
+
+00000004 <rGPGCON>:
+   4:	00000000 	.word	0x00000000
+
+00000008 <major>:
+   8:	00000000 	.word	0x00000000
+
+0000000c <leddrv_class>:
+   c:	00000000 	.word	0x00000000
+
+00000010 <rGPFDAT>:
+  10:	00000000 	.word	0x00000000
+
+00000014 <rGPGDAT>:
+  14:	00          	.byte	0x00
+  15:	00          	.byte	0x00
+	...
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 	movtmi	r4, #14080	; 0x3700
+   4:	5328203a 	teqpl	r8, #58	; 0x3a
+   8:	6372756f 	cmnvs	r2, #465567744	; 0x1bc00000
+   c:	20797265 	rsbscs	r7, r9, r5, ror #4
+  10:	202b2b47 	eorcs	r2, fp, r7, asr #22
+  14:	6574694c 	ldrbvs	r6, [r4, #-2380]!
+  18:	30303220 	eorscc	r3, r0, r0, lsr #4
+  1c:	2d337138 	ldfcss	f7, [r3, #-224]!
+  20:	20293237 	eorcs	r3, r9, r7, lsr r2
+  24:	2e332e34 	mrccs	14, 1, r2, cr3, cr4, {1}
+  28:	47000032 	smladxmi	r0, r2, r0, r0
+  2c:	203a4343 	eorscs	r4, sl, r3, asr #6
+  30:	756f5328 	strbvc	r5, [pc, #-808]!	; fffffd10 <init_module+0xfffffb8c>
+  34:	72656372 	rsbvc	r6, r5, #-939524095	; 0xc8000001
+  38:	2b472079 	blcs	11c8224 <init_module+0x11c80a0>
+  3c:	694c202b 	stmdbvs	ip, {r0, r1, r3, r5, sp}^
+  40:	32206574 	eorcc	r6, r0, #486539264	; 0x1d000000
+  44:	71383030 	teqvc	r8, r0, lsr r0
+  48:	32372d33 	eorscc	r2, r7, #3264	; 0xcc0
+  4c:	2e342029 	cdpcs	0, 3, cr2, cr4, cr9, {1}
+  50:	00322e33 	eorseq	r2, r2, r3, lsr lr
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002741 	andeq	r2, r0, r1, asr #14
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	0000001d 	andeq	r0, r0, sp, lsl r0
+  10:	00543405 	subseq	r3, r4, r5, lsl #8
+  14:	01080206 	tsteq	r8, r6, lsl #4
+  18:	01140412 	tsteq	r4, r2, lsl r4
+  1c:	03170115 	tsteq	r7, #1073741829	; 0x40000005
+  20:	01190118 	tsteq	r9, r8, lsl r1
+  24:	021e021a 	andseq	r0, lr, #-1610612735	; 0xa0000001

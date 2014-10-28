@@ -1,0 +1,4 @@
+1. 	不要在leds_init函数中关掉所有的leds灯，否则，定时器每次中断后都要初始化leds，然后关闭所有leds灯
+
+2. 	使用中断向量方式（isr vector）实现的时候，由于void (*isr[60])(void)是一个全局未初始化变量，
+		所以，要写链接脚本timer0.lds（划分bss段）

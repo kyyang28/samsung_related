@@ -1,0 +1,16 @@
+---- speed Matches (15 in 1 files) ----
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):static void SDHC_SetSdClock(SDHC* sCh, SDHC_SpeedMode speed);
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):	SDHC_SpeedMode speed;
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):			speed = ( uOperFreq > SDHC_SD_HIGH_SPEED_CLOCK) ? (SDHC_HIGH_SPEED) : (SDHC_NORMAL_SPEED);
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):			if (!SDHC_SetSdCardSpeedMode(speed, sCh)) {
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):	// host controller speed setting.
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):	speed = ( uOperFreq > SDHC_MMC_HIGH_SPEED_CLOCK) ? (SDHC_HIGH_SPEED) : (SDHC_NORMAL_SPEED);
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):	SDHC_SetHostCtrlSpeedMode( speed, sCh );
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):	SDHC_SetSdClock(sCh, speed);
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):// File Description : Setting speed mode inside SD card.
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):		//CONSOL_Printf( "This Media support high speed mode.\n" );
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):		printf( "This Media support high speed mode.\n" );
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):		//CONSOL_Printf( "This Media can't support high speed mode.\n" );
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):		printf( "This Media can't support high speed mode.\n" );
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):void SDHC_SetSdClock(SDHC* sCh, SDHC_SpeedMode speed)
+Sdhc.c (c:\documents and settings\administrator\桌面\temp\sd):	if(speed==SDHC_NORMAL_SPEED) {

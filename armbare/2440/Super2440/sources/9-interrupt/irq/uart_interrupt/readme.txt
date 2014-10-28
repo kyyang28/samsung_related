@@ -1,0 +1,1 @@
+uart w/o clock use 12 MHz and baudrate is 37600

@@ -1,0 +1,15 @@
+
+在开发板的根文件系统下，执行：
+
+1. insmod mini2440_vnet.ko
+
+2. ifconfig efcnet0 2.2.2.2
+
+3. ifconfig (可以看到有efcnet0的网络信息)
+
+4. ping 2.2.2.2
+	 可以看到有数据返回，能ping通
+	 
+5. ping 2.2.2.6
+	 系统崩溃，因为没有实现传输函数(ndo_start_xmit)
+	 

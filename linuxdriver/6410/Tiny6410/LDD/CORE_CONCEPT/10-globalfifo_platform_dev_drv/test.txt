@@ -1,0 +1,5 @@
+1. 	insmod globalfifo_driver.ko
+2. 	insmod globalfifo_device.ko
+3.	./globalfifo_test &
+4.	echo hello world > /dev/globalfifo
+5.	echo whatever > /dev/globalfifo

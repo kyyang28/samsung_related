@@ -1,0 +1,12 @@
+
+2 Jul 2006 Gilbert Ashley
+
+mtd-utils-05.07.23.tar.bz2
+
+mtd-utils is the mtd jffs utilities separated from the rest
+of the ktd sources, which are now part of the kernel sources.
+
+For convenience, I've split the utilties and includes into
+a separate tarball, with the mtd documentation.
+All sources were taken from the original tarball:
+mtd-snapshot-20050723.tar.bz2

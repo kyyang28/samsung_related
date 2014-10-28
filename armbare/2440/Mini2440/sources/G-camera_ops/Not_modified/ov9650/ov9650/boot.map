@@ -1,0 +1,380 @@
+Archive member included because of file (symbol)
+
+/home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+                              print.o (__aeabi_uidiv)
+/home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)
+                              /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o) (__div0)
+/home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+                              /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o) (raise)
+/home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(errno.o)
+                              /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o) (__libc_errno)
+/home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(aeabi_read_tp.o)
+                              /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o) (__aeabi_read_tp)
+
+Allocating common symbols
+Common symbol       size              file
+
+LCD_BUFFER          0x96000           lcd.o
+numbers             0x44              print.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x30000000                . = 0x30000000
+                0x30000000                . = ALIGN (0x4)
+
+.text           0x30000000     0x4c90
+ start.o(.text)
+ .text          0x30000000      0x390 start.o
+                0x30000000                _start
+                0x300000d4                _armboot_start
+                0x300000d8                _bss_start
+                0x300000dc                _bss_end
+ lowlevel_init.o()
+ .text          0x30000390       0x70 lowlevel_init.o
+                0x30000394                lowlevel_init
+ .data          0x30000400        0x0 lowlevel_init.o
+ .bss           0x30000400        0x0 lowlevel_init.o
+ .ARM.attributes
+                0x30000400       0x1a lowlevel_init.o
+ nand.o()
+ *fill*         0x3000041a        0x2 00
+ .text          0x3000041c      0x884 nand.o
+                0x3000041c                __RdPage512
+                0x30000484                Nand_Reset
+                0x30000528                NF8_CheckId
+                0x30000638                Nand_Init
+                0x30000688                Nand_IsBadBlockPage512
+                0x30000788                Nand_IsBadBlockPage2048
+                0x3000089c                Nand_IsBadBlock
+                0x300008fc                Nand_ReadSectorPage512
+                0x300009e0                Nand_ReadSectorPage2048
+                0x30000b04                Nand_ReadSector
+                0x30000b70                CopyProgramFromNand
+ .data          0x30000ca0        0x0 nand.o
+ .bss           0x30000ca0        0x0 nand.o
+ .comment       0x30000ca0       0x18 nand.o
+                                 0x19 (size before relaxing)
+ .note.GNU-stack
+                0x30000cb8        0x0 nand.o
+ .ARM.attributes
+                0x30000cb8       0x2a nand.o
+ interrupt.o()
+ *fill*         0x30000ce2        0x2 00
+ .text          0x30000ce4       0x28 interrupt.o
+                0x30000ce4                IsrIRQ
+ .data          0x30000d0c        0x0 interrupt.o
+ .bss           0x30000d0c        0x0 interrupt.o
+ .ARM.attributes
+                0x30000d0c       0x1a interrupt.o
+ *(.text)
+ *fill*         0x30000d26        0x2 00
+ .text          0x30000d28      0x2ac mmu.o
+                0x30000d28                MMU_Init
+                0x30000f24                MMU_SetMTT
+ .text          0x30000fd4      0x184 mmulib.o
+                0x30000fd4                SET_IF
+                0x30000fe8                WR_IF
+                0x30000ff0                CLR_IF
+                0x30001000                MMU_EnableICache
+                0x30001010                MMU_DisableICache
+                0x30001020                MMU_EnableDCache
+                0x30001030                MMU_DisableDCache
+                0x30001040                MMU_EnableAlignFault
+                0x30001050                MMU_DisableAlignFault
+                0x30001060                MMU_EnableMMU
+                0x30001070                MMU_DisableMMU
+                0x30001080                MMU_SetFastBusMode
+                0x30001090                MMU_SetAsyncBusMode
+                0x300010a0                MMU_SetTTBase
+                0x300010a8                MMU_SetDomain
+                0x300010b0                MMU_InvalidateIDCache
+                0x300010b8                MMU_InvalidateICache
+                0x300010c0                MMU_InvalidateICacheMVA
+                0x300010c8                MMU_PrefetchICacheMVA
+                0x300010d0                MMU_InvalidateDCache
+                0x300010d8                MMU_InvalidateDCacheMVA
+                0x300010e0                MMU_CleanDCacheMVA
+                0x300010e8                MMU_CleanInvalidateDCacheMVA
+                0x300010f0                MMU_CleanDCacheIndex
+                0x300010f8                MMU_CleanInvalidateDCacheIndex
+                0x30001100                MMU_WaitForInterrupt
+                0x30001108                MMU_InvalidateTLB
+                0x30001110                MMU_InvalidateITLB
+                0x30001118                MMU_InvalidateITLBMVA
+                0x30001120                MMU_InvalidateDTLB
+                0x30001128                MMU_InvalidateDTLBMVA
+                0x30001130                MMU_SetDCacheLockdownBase
+                0x30001138                MMU_SetICacheLockdownBase
+                0x30001140                MMU_SetDTLBLockdown
+                0x30001148                MMU_SetITLBLockdown
+                0x30001150                MMU_SetProcessId
+ .text          0x30001158       0x60 main.o
+                0x30001158                main
+ .text          0x300011b8      0xb7c 2440lib.o
+                0x300011b8                Delay
+                0x300012f4                Port_Init
+                0x300014a4                Uart_Init
+                0x30001558                Uart_TxEmpty
+                0x300015e8                Uart_Getch
+                0x300016bc                Uart_GetKey
+                0x300017b4                Uart_GetString
+                0x3000186c                Uart_SendByte
+                0x300019fc                Uart_SendString
+                0x30001a48                Uart0IsrInit
+                0x30001ab8                ChangeMPllValue
+                0x30001b04                enable_irq
+                0x30001b24                disable_irq
+                0x30001b44                ChangeUPllValue
+                0x30001b90                LedOn
+                0x30001c38                LedOff
+                0x30001cdc                BeepOn
+                0x30001d08                BeepOff
+ .text          0x30001d34      0xa9c print.o
+                0x30001d34                do_div
+                0x30001d9c                memcpy
+                0x30001e2c                number
+                0x30002030                format_decode
+                0x30002398                vsnprintf
+                0x30002770                Uart_Printf
+ .text          0x300027d0     0x1560 lcd.o
+                0x30002a00                Lcd_MoveViewPort
+                0x30002ab8                PutPixel
+                0x30002b38                GUI_Point
+                0x30002bb8                Lcd_ClearScr
+                0x30002c60                Glib_Line
+                0x3000320c                Glib_Rectangle
+                0x300032a4                Glib_FilledRectangle
+                0x30003310                Paint_Bmp
+                0x30003450                drawCross
+                0x300037ac                Lcd_PutASCII
+                0x300038f4                Lcd_PutHZ
+                0x30003b60                Lcd_printf
+                0x30003cfc                Lcd_T35_Init
+ .text          0x30003d30        0x0 font_libs.o
+ .text          0x30003d30      0xd58 ov9650.o
+                0x30003d30                delay
+                0x30003d98                SCCB_start
+                0x30003e18                SCCB_end
+                0x30003e84                SCCB_sendbyte
+                0x30003fd0                SCCB_receivebyte
+                0x3000410c                SCCB_senddata
+                0x30004164                SCCB_receivedata
+                0x300041cc                config_ov9650
+                0x30004338                CalculateBurstSize
+                0x30004474                CalculatePrescalerRatioShift
+                0x300045bc                CamInit
+                0x300048c0                CamPortSet
+                0x30004928                ov9650_test
+ .text          0x30004a88      0x114 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+                0x30004a88                __udivsi3
+                0x30004a88                __aeabi_uidiv
+                0x30004b84                __aeabi_uidivmod
+ .text          0x30004b9c       0x14 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)
+                0x30004b9c                __div0
+ .text          0x30004bb0       0xc8 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+                0x30004bb0                gsignal
+                0x30004bb0                raise
+ .text          0x30004c78        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(errno.o)
+ *fill*         0x30004c78        0x8 00
+ .text          0x30004c80       0x10 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(aeabi_read_tp.o)
+                0x30004c80                __aeabi_read_tp
+
+.glue_7         0x30004c90        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x30004c90        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x30004c90        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x30004c90        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+                0x30004c90                . = ALIGN (0x4)
+
+.rodata         0x30004c90    0x4102c
+ *(SORT(.rodata*))
+ .rodata        0x30004c90       0x84 main.o
+ .rodata        0x30004d14        0x4 2440lib.o
+ .rodata        0x30004d18       0x14 print.o
+ .rodata        0x30004d2c    0x40e40 font_libs.o
+                0x30004d2c                __CHS
+                0x30044b6c                __VGA
+ .rodata        0x30045b6c      0x150 ov9650.o
+                0x30045b6c                ov9650_register
+
+.rel.dyn        0x30045cbc        0x0
+ .rel.got       0x00000000        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+                0x30045cbc                . = ALIGN (0x4)
+
+.data           0x30045cbc        0x4
+ *(.data)
+ .data          0x30045cbc        0x0 start.o
+ .data          0x30045cbc        0x0 mmu.o
+ .data          0x30045cbc        0x0 mmulib.o
+ .data          0x30045cbc        0x0 main.o
+ .data          0x30045cbc        0x0 2440lib.o
+ .data          0x30045cbc        0x4 print.o
+                0x30045cbc                digits
+ .data          0x30045cc0        0x0 lcd.o
+ .data          0x30045cc0        0x0 font_libs.o
+ .data          0x30045cc0        0x0 ov9650.o
+ .data          0x30045cc0        0x0 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+ .data          0x30045cc0        0x0 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)
+ .data          0x30045cc0        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+ .data          0x30045cc0        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(errno.o)
+ .data          0x30045cc0        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(aeabi_read_tp.o)
+
+.got.plt        0x30045cc0        0xc
+ .got.plt       0x30045cc0        0xc /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+                0x30045cc0                _GLOBAL_OFFSET_TABLE_
+                0x30045ccc                . = ALIGN (0x4)
+
+.got            0x30045ccc        0x4
+ *(.got)
+ .got           0x30045ccc        0x4 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+                0x30045cd0                . = ALIGN (0x4)
+                0x30045cd0                __bss_start = .
+
+.bss            0x30045cd0    0x96448
+ *(.bss)
+ .bss           0x30045cd0        0x0 start.o
+ .bss           0x30045cd0        0x0 mmu.o
+ .bss           0x30045cd0        0x0 mmulib.o
+ .bss           0x30045cd0        0x0 main.o
+ .bss           0x30045cd0        0x4 2440lib.o
+ .bss           0x30045cd4      0x400 print.o
+ .bss           0x300460d4        0x0 lcd.o
+ .bss           0x300460d4        0x0 font_libs.o
+ .bss           0x300460d4        0x0 ov9650.o
+ .bss           0x300460d4        0x0 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+ .bss           0x300460d4        0x0 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)
+ .bss           0x300460d4        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+ .bss           0x300460d4        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(errno.o)
+ .bss           0x300460d4        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(aeabi_read_tp.o)
+                0x300460d4                . = ALIGN (0x4)
+ COMMON         0x300460d4       0x44 print.o
+                0x300460d4                numbers
+ COMMON         0x30046118    0x96000 lcd.o
+                0x30046118                LCD_BUFFER
+                0x300dc118                _end = .
+Address of section .text set to 0x30000000
+LOAD start.o
+LOAD lowlevel_init.o
+LOAD nand.o
+LOAD mmu.o
+LOAD mmulib.o
+LOAD interrupt.o
+LOAD main.o
+LOAD 2440lib.o
+LOAD print.o
+LOAD lcd.o
+LOAD font_libs.o
+LOAD ov9650.o
+START GROUP
+LOAD /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a
+LOAD /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc_eh.a
+LOAD /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcov.a
+LOAD /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a
+END GROUP
+OUTPUT(boot.elf elf32-littlearm)
+
+.tbss           0x300dc118        0x4
+ .tbss          0x300dc118        0x4 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(errno.o)
+                0x300dc118                errno
+                0x300dc118                __libc_errno
+
+.ARM.attributes
+                0x00000000       0x26
+ .ARM.attributes
+                0x00000000       0x1a start.o
+ .ARM.attributes
+                0x0000001a       0x2a mmu.o
+ .ARM.attributes
+                0x00000044       0x1a mmulib.o
+ .ARM.attributes
+                0x0000005e       0x2a main.o
+ .ARM.attributes
+                0x00000088       0x2a 2440lib.o
+ .ARM.attributes
+                0x000000b2       0x2a print.o
+ .ARM.attributes
+                0x000000dc       0x2a lcd.o
+ .ARM.attributes
+                0x00000106       0x2a font_libs.o
+ .ARM.attributes
+                0x00000130       0x2a ov9650.o
+ .ARM.attributes
+                0x0000015a       0x1a /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000174       0x1a /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x0000018e       0x2f /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+ .ARM.attributes
+                0x000001bd       0x2f /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(errno.o)
+ .ARM.attributes
+                0x000001ec       0x1a /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(aeabi_read_tp.o)
+
+.comment        0x00000000       0x29
+ .comment       0x00000000       0x18 mmu.o
+                                 0x19 (size before relaxing)
+ .comment       0x00000000       0x19 main.o
+ .comment       0x00000000       0x19 2440lib.o
+ .comment       0x00000000       0x19 print.o
+ .comment       0x00000000       0x19 lcd.o
+ .comment       0x00000000       0x19 font_libs.o
+ .comment       0x00000000       0x19 ov9650.o
+ .comment       0x00000018       0x11 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+                                 0x12 (size before relaxing)
+ .comment       0x00000000       0x12 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(errno.o)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 mmu.o
+ .note.GNU-stack
+                0x00000000        0x0 main.o
+ .note.GNU-stack
+                0x00000000        0x0 2440lib.o
+ .note.GNU-stack
+                0x00000000        0x0 print.o
+ .note.GNU-stack
+                0x00000000        0x0 lcd.o
+ .note.GNU-stack
+                0x00000000        0x0 font_libs.o
+ .note.GNU-stack
+                0x00000000        0x0 ov9650.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+ .note.GNU-stack
+                0x00000000        0x0 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)
+ .note.GNU-stack
+                0x00000000        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(raise.o)
+ .note.GNU-stack
+                0x00000000        0x0 /home/sun/study/crosstools/4.4.3/arm-none-linux-gnueabi/sys-root/usr/lib/libc.a(errno.o)
+
+.debug_frame    0x00000000       0x2c
+ .debug_frame   0x00000000       0x2c /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+
+.debug_line     0x00000000      0x15a
+ .debug_line    0x00000000       0xbf /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+ .debug_line    0x000000bf       0x9b /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)
+
+.debug_info     0x00000000      0x20a
+ .debug_info    0x00000000      0x105 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+ .debug_info    0x00000105      0x105 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)
+
+.debug_abbrev   0x00000000       0x28
+ .debug_abbrev  0x00000000       0x14 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x00000014       0x14 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)
+
+.debug_aranges  0x00000000       0x40
+ .debug_aranges
+                0x00000000       0x20 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x00000020       0x20 /home/sun/study/crosstools/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/libgcc.a(_dvmd_lnx.o)

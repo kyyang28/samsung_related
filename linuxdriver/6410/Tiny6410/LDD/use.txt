@@ -1,0 +1,15 @@
+1. 加载：insmod xxx.ko
+2. 查看：cat /proc/devices, lsmod
+3. 编译应用程序
+   gcc -o hello_app hello_app.c
+   
+   //创建节点
+   mknod /dev/abc c 101 0
+   
+   执行应用程序
+   ./hello_app
+   
+   看内核打印信息
+   dmesg
+
+4. 卸载：rmmod xxx

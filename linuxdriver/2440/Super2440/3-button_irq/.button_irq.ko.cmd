@@ -1,0 +1,1 @@
+cmd_/home/kyyang/yan/drivers/3-button_irq/button_irq.ko := arm-linux-ld -EL -r  -T /home/kyyang/yan/kernel/linux-2.6.38_Super/scripts/module-common.lds --build-id  -o /home/kyyang/yan/drivers/3-button_irq/button_irq.ko /home/kyyang/yan/drivers/3-button_irq/button_irq.o /home/kyyang/yan/drivers/3-button_irq/button_irq.mod.o

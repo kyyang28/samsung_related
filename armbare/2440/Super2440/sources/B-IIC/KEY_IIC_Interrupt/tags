@@ -1,0 +1,505 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALIGN	lib/div64.S	/^#define ALIGN		.align 4,0x90	$/;"	d
+ALIGN	lib/lib1funcs.S	/^#define ALIGN		.align 4,0x90$/;"	d
+AR	Makefile	/^AR      = arm-linux-ar$/;"	m
+B0_PMC	lowlevel_init.S	/^#define B0_PMC			(0x0) \/* normal *\/$/;"	d
+B0_Tacc	lowlevel_init.S	/^#define B0_Tacc			(0x7) \/* 14 clock *\/$/;"	d
+B0_Tacp	lowlevel_init.S	/^#define B0_Tacp			(0x0) \/* 2 clock *\/$/;"	d
+B0_Tacs	lowlevel_init.S	/^#define B0_Tacs			(0x0) \/* 0 clock *\/$/;"	d
+B0_Tcah	lowlevel_init.S	/^#define B0_Tcah			(0x0) \/* 0 clock *\/$/;"	d
+B0_Tcoh	lowlevel_init.S	/^#define B0_Tcoh			(0x0) \/* 0 clock *\/$/;"	d
+B0_Tcos	lowlevel_init.S	/^#define B0_Tcos			(0x0) \/* 0 clock *\/$/;"	d
+B1_BWSCON	lowlevel_init.S	/^#define B1_BWSCON	  	(DW16)$/;"	d
+B1_PMC	lowlevel_init.S	/^#define B1_PMC			(0x0) \/* normal *\/$/;"	d
+B1_Tacc	lowlevel_init.S	/^#define B1_Tacc			(0x7) \/* 14 clock *\/$/;"	d
+B1_Tacp	lowlevel_init.S	/^#define B1_Tacp			(0x0) \/* 2 clock *\/$/;"	d
+B1_Tacs	lowlevel_init.S	/^#define B1_Tacs			(0x0) \/* 0 clock *\/$/;"	d
+B1_Tcah	lowlevel_init.S	/^#define B1_Tcah			(0x0) \/* 0 clock *\/$/;"	d
+B1_Tcoh	lowlevel_init.S	/^#define B1_Tcoh			(0x0) \/* 0 clock *\/$/;"	d
+B1_Tcos	lowlevel_init.S	/^#define B1_Tcos			(0x0) \/* 0 clock *\/$/;"	d
+B2_BWSCON	lowlevel_init.S	/^#define B2_BWSCON	  	(DW16)$/;"	d
+B2_PMC	lowlevel_init.S	/^#define B2_PMC			(0x0) \/* normal *\/$/;"	d
+B2_Tacc	lowlevel_init.S	/^#define B2_Tacc			(0x7) \/* 14 clock *\/$/;"	d
+B2_Tacp	lowlevel_init.S	/^#define B2_Tacp			(0x0) \/* 2 clock *\/$/;"	d
+B2_Tacs	lowlevel_init.S	/^#define B2_Tacs			(0x0) \/* 0 clock *\/$/;"	d
+B2_Tcah	lowlevel_init.S	/^#define B2_Tcah			(0x0) \/* 0 clock *\/$/;"	d
+B2_Tcoh	lowlevel_init.S	/^#define B2_Tcoh			(0x0) \/* 0 clock *\/$/;"	d
+B2_Tcos	lowlevel_init.S	/^#define B2_Tcos			(0x0) \/* 0 clock *\/$/;"	d
+B3_BWSCON	lowlevel_init.S	/^#define B3_BWSCON	  	(DW16)$/;"	d
+B3_PMC	lowlevel_init.S	/^#define B3_PMC			(0x0) \/* normal *\/$/;"	d
+B3_Tacc	lowlevel_init.S	/^#define B3_Tacc			(0x7) \/* 14 clock *\/$/;"	d
+B3_Tacp	lowlevel_init.S	/^#define B3_Tacp			(0x0) \/* 2 clock *\/$/;"	d
+B3_Tacs	lowlevel_init.S	/^#define B3_Tacs			(0x0) \/* 0 clock *\/$/;"	d
+B3_Tcah	lowlevel_init.S	/^#define B3_Tcah			(0x0) \/* 0 clock *\/$/;"	d
+B3_Tcoh	lowlevel_init.S	/^#define B3_Tcoh			(0x0) \/* 0 clock *\/$/;"	d
+B3_Tcos	lowlevel_init.S	/^#define B3_Tcos			(0x0) \/* 0 clock *\/$/;"	d
+B4_BWSCON	lowlevel_init.S	/^#define B4_BWSCON	  	(DW16)$/;"	d
+B4_PMC	lowlevel_init.S	/^#define B4_PMC			(0x0) \/* normal *\/$/;"	d
+B4_Tacc	lowlevel_init.S	/^#define B4_Tacc			(0x7) \/* 14 clock *\/$/;"	d
+B4_Tacp	lowlevel_init.S	/^#define B4_Tacp			(0x0) \/* 2 clock *\/$/;"	d
+B4_Tacs	lowlevel_init.S	/^#define B4_Tacs			(0x0) \/* 0 clock *\/$/;"	d
+B4_Tcah	lowlevel_init.S	/^#define B4_Tcah			(0x0) \/* 0 clock *\/$/;"	d
+B4_Tcoh	lowlevel_init.S	/^#define B4_Tcoh			(0x0) \/* 0 clock *\/$/;"	d
+B4_Tcos	lowlevel_init.S	/^#define B4_Tcos			(0x0) \/* 0 clock *\/$/;"	d
+B5_BWSCON	lowlevel_init.S	/^#define B5_BWSCON	  	(DW8)$/;"	d
+B5_PMC	lowlevel_init.S	/^#define B5_PMC			(0x0) \/* normal *\/$/;"	d
+B5_Tacc	lowlevel_init.S	/^#define B5_Tacc			(0x7) \/* 14 clock *\/$/;"	d
+B5_Tacp	lowlevel_init.S	/^#define B5_Tacp			(0x0) \/* 2 clock *\/$/;"	d
+B5_Tacs	lowlevel_init.S	/^#define B5_Tacs			(0x0) \/* 0 clock *\/$/;"	d
+B5_Tcah	lowlevel_init.S	/^#define B5_Tcah			(0x0) \/* 0 clock *\/$/;"	d
+B5_Tcoh	lowlevel_init.S	/^#define B5_Tcoh			(0x0) \/* 0 clock *\/$/;"	d
+B5_Tcos	lowlevel_init.S	/^#define B5_Tcos			(0x0) \/* 0 clock *\/$/;"	d
+B6_BWSCON	lowlevel_init.S	/^#define B6_BWSCON	  	(DW32)$/;"	d
+B6_MT	lowlevel_init.S	/^#define B6_MT			(0x3) \/* SDRAM *\/$/;"	d
+B6_SCAN	lowlevel_init.S	/^#define B6_SCAN			(0x1) \/* Column address 9-bit *\/$/;"	d
+B6_Trcd	lowlevel_init.S	/^#define B6_Trcd			(0x1) \/* 3 clocks *\/$/;"	d
+B7_BWSCON	lowlevel_init.S	/^#define B7_BWSCON	  	(DW32)$/;"	d
+B7_MT	lowlevel_init.S	/^#define B7_MT			(0x3) \/* SDRAM *\/$/;"	d
+B7_SCAN	lowlevel_init.S	/^#define B7_SCAN			(0x1) \/* Column address 9-bit *\/$/;"	d
+B7_Trcd	lowlevel_init.S	/^#define B7_Trcd			(0x1) \/* 3 clocks *\/$/;"	d
+BITS_PER_UNIT	include/gcclib.h	4;"	d
+BK76MAP	lowlevel_init.S	/^#define BK76MAP			(0x1) \/* 64MB\/64MB *\/$/;"	d
+BL	lowlevel_init.S	/^#define BL			(0x0) \/* Burst length - 1 (Fixed) *\/$/;"	d
+BT	lowlevel_init.S	/^#define	BT			(0x0) \/* Burst type - Sequential (Fixed) *\/$/;"	d
+BURST_EN	lowlevel_init.S	/^#define BURST_EN		(0x1) \/* Enable burst operation *\/$/;"	d
+BUSY	s3c2440.h	51;"	d
+CAMDIVN	s3c2440.h	/^	S3C2440_REG32 CAMDIVN;$/;"	m	struct:__anon1
+CC	Makefile	/^CC      = arm-linux-gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS := -Wall -DLARGER_NAND_PAGE$/;"	m
+CL	lowlevel_init.S	/^#define CL			(0x3) \/* CAS latency - 3 clocks *\/$/;"	d
+CLKCON	s3c2440.h	/^	S3C2440_REG32 CLKCON;$/;"	m	struct:__anon1
+CLKDIVN	s3c2440.h	/^	S3C2440_REG32 CLKDIVN;$/;"	m	struct:__anon1
+CLKSLOW	s3c2440.h	/^	S3C2440_REG32 CLKSLOW;$/;"	m	struct:__anon1
+COM0	lib/printf.c	5;"	d	file:
+COM0	lib/string.c	23;"	d	file:
+COM0	main.c	4;"	d	file:
+CPPFLAGS	Makefile	/^CPPFLAGS := -nostdinc -I$(INCLUDEDIR)$/;"	m
+CPUID_CACHETYPE	include/system.h	46;"	d
+CPUID_ID	include/system.h	45;"	d
+CPUID_TCM	include/system.h	47;"	d
+CPUID_TLBTYPE	include/system.h	48;"	d
+CPU_ARCH_ARMv3	include/system.h	9;"	d
+CPU_ARCH_ARMv4	include/system.h	10;"	d
+CPU_ARCH_ARMv4T	include/system.h	11;"	d
+CPU_ARCH_ARMv5	include/system.h	12;"	d
+CPU_ARCH_ARMv5T	include/system.h	13;"	d
+CPU_ARCH_ARMv5TE	include/system.h	14;"	d
+CPU_ARCH_ARMv5TEJ	include/system.h	15;"	d
+CPU_ARCH_ARMv6	include/system.h	16;"	d
+CPU_ARCH_UNKNOWN	include/system.h	8;"	d
+CR_A	include/system.h	22;"	d
+CR_B	include/system.h	28;"	d
+CR_C	include/system.h	23;"	d
+CR_D	include/system.h	26;"	d
+CR_DT	include/system.h	37;"	d
+CR_F	include/system.h	31;"	d
+CR_FI	include/system.h	40;"	d
+CR_I	include/system.h	33;"	d
+CR_IT	include/system.h	38;"	d
+CR_L	include/system.h	27;"	d
+CR_L4	include/system.h	36;"	d
+CR_M	include/system.h	21;"	d
+CR_P	include/system.h	25;"	d
+CR_R	include/system.h	30;"	d
+CR_RR	include/system.h	35;"	d
+CR_S	include/system.h	29;"	d
+CR_ST	include/system.h	39;"	d
+CR_U	include/system.h	41;"	d
+CR_V	include/system.h	34;"	d
+CR_VE	include/system.h	43;"	d
+CR_W	include/system.h	24;"	d
+CR_XP	include/system.h	42;"	d
+CR_Z	include/system.h	32;"	d
+CopyCode2RAM	init.c	/^int CopyCode2RAM(unsigned char *buf, unsigned long start_addr, int size)$/;"	f
+DELAY	IIC_handler.c	/^static inline void DELAY (unsigned long ticks)$/;"	f	file:
+DELAY	led.c	/^static inline void DELAY (unsigned long ticks)$/;"	f	file:
+DIstruct	include/gcclib.h	/^  struct DIstruct {SItype high, low;};$/;"	s
+DIstruct	include/gcclib.h	/^  struct DIstruct {SItype low, high;};$/;"	s
+DItype	include/gcclib.h	/^typedef          int DItype     __attribute__ ((mode (DI)));$/;"	t
+DIunion	include/gcclib.h	/^} DIunion;$/;"	t	typeref:union:__anon3
+DW16	lowlevel_init.S	/^#define DW16		 	(0x1)$/;"	d
+DW32	lowlevel_init.S	/^#define DW32		 	(0x2)$/;"	d
+DW8	lowlevel_init.S	/^#define DW8		 		(0x0)$/;"	d
+EINT0_OFFSET	s3c2440.h	168;"	d
+EINT1_OFFSET	s3c2440.h	169;"	d
+EINT2_OFFSET	s3c2440.h	170;"	d
+EINT3_OFFSET	s3c2440.h	171;"	d
+EINT4_OFFSET	s3c2440.h	172;"	d
+EINTMASK	s3c2440.h	97;"	d
+EINTPEND	s3c2440.h	98;"	d
+ENTRY	lib/div64.S	/^#define ENTRY(name) \\$/;"	d
+ENTRY	lib/lib1funcs.S	/^#define ENTRY(name) \\$/;"	d
+GPECON	s3c2440.h	13;"	d
+GPEDAT	s3c2440.h	14;"	d
+GPEUP	s3c2440.h	15;"	d
+GPFCON	s3c2440.h	19;"	d
+GPFDAT	s3c2440.h	20;"	d
+GPGCON	s3c2440.h	21;"	d
+GPGDAT	s3c2440.h	22;"	d
+GPHCON	s3c2440.h	102;"	d
+GPHDAT	s3c2440.h	103;"	d
+GPHUP	s3c2440.h	104;"	d
+IICADD	s3c2440.h	160;"	d
+IICCON	s3c2440.h	158;"	d
+IICDS	s3c2440.h	161;"	d
+IICLC	s3c2440.h	162;"	d
+IICSTAT	s3c2440.h	159;"	d
+IIC_OFFSET	s3c2440.h	173;"	d
+IIC_init	IIC.c	/^void IIC_init(void)$/;"	f
+IIC_init_return	start.S	/^IIC_init_return:$/;"	l
+IIC_read	IIC.c	/^void IIC_read(unsigned int slaveAddr, unsigned char *buf, int size)$/;"	f
+IIC_write	IIC.c	/^void IIC_write(unsigned int slaveAddr, unsigned char *buf, int size)$/;"	f
+INBUFSIZE	lib/printf.c	10;"	d	file:
+INCLUDEDIR	Makefile	/^INCLUDEDIR := $(shell pwd)\/include$/;"	m
+INTMOD	s3c2440.h	88;"	d
+INTMSK	s3c2440.h	89;"	d
+INTOFFSET	s3c2440.h	92;"	d
+INTPND	s3c2440.h	91;"	d
+INTSUBMSK	s3c2440.h	94;"	d
+INT_MAX	include/kernel.h	1;"	d
+INT_MIN	include/kernel.h	2;"	d
+IRQ_ISR_ENTRY	irq.c	/^void IRQ_ISR_ENTRY(void)$/;"	f
+LARGE	lib/vsprintf.c	146;"	d	file:
+LD	Makefile	/^LD      = arm-linux-ld$/;"	m
+LEFT	lib/vsprintf.c	144;"	d	file:
+LOCKTIME	s3c2440.h	/^	S3C2440_REG32 LOCKTIME;$/;"	m	struct:__anon1
+LONG_MAX	include/kernel.h	4;"	d
+LONG_MIN	include/kernel.h	5;"	d
+Ldiv0	lib/lib1funcs.S	/^Ldiv0:$/;"	l
+LedRun	led.c	/^void LedRun(void)$/;"	f
+MDIV	s3c2440.h	27;"	d
+MEM_INIT_VAL	lowlevel_init.S	/^MEM_INIT_VAL:$/;"	l
+MPLLCON	s3c2440.h	/^	S3C2440_REG32 MPLLCON;$/;"	m	struct:__anon1
+NAND_BLOCK_MASK	s3c2440.h	54;"	d
+NAND_BLOCK_MASK_LP	s3c2440.h	57;"	d
+NAND_SECTOR_SIZE	s3c2440.h	53;"	d
+NAND_SECTOR_SIZE_LP	s3c2440.h	56;"	d
+NATIVE_INT	lib/vsprintf.h	20;"	d
+NFADDR	s3c2440.h	/^    S3C2440_REG32   NFADDR;$/;"	m	struct:__anon2
+NFCMD	s3c2440.h	/^    S3C2440_REG32   NFCMD;$/;"	m	struct:__anon2
+NFCONF	s3c2440.h	/^    S3C2440_REG32   NFCONF;$/;"	m	struct:__anon2
+NFCONT	s3c2440.h	/^    S3C2440_REG32   NFCONT;$/;"	m	struct:__anon2
+NFDATA	s3c2440.h	/^    S3C2440_REG32   NFDATA;$/;"	m	struct:__anon2
+NFEBLK	s3c2440.h	/^    S3C2440_REG32   NFEBLK;$/;"	m	struct:__anon2
+NFESTAT0	s3c2440.h	/^    S3C2440_REG32   NFESTAT0;$/;"	m	struct:__anon2
+NFESTAT1	s3c2440.h	/^    S3C2440_REG32   NFESTAT1;$/;"	m	struct:__anon2
+NFMECC0	s3c2440.h	/^    S3C2440_REG32   NFMECC0;$/;"	m	struct:__anon2
+NFMECC1	s3c2440.h	/^    S3C2440_REG32   NFMECC1;$/;"	m	struct:__anon2
+NFMECCD0	s3c2440.h	/^    S3C2440_REG32   NFMECCD0;$/;"	m	struct:__anon2
+NFMECCD1	s3c2440.h	/^    S3C2440_REG32   NFMECCD1;$/;"	m	struct:__anon2
+NFSBLK	s3c2440.h	/^    S3C2440_REG32   NFSBLK;$/;"	m	struct:__anon2
+NFSECC	s3c2440.h	/^    S3C2440_REG32   NFSECC;$/;"	m	struct:__anon2
+NFSECCD	s3c2440.h	/^    S3C2440_REG32   NFSECCD;$/;"	m	struct:__anon2
+NFSTAT	s3c2440.h	/^    S3C2440_REG32   NFSTAT;$/;"	m	struct:__anon2
+NULL	include/types.h	6;"	d
+OBJCOPY	Makefile	/^OBJCOPY = arm-linux-objcopy$/;"	m
+OBJDUMP	Makefile	/^OBJDUMP = arm-linux-objdump$/;"	m
+OBJS	Makefile	/^OBJS := start.o init.o lowlevel_init.o nand.o uart.o led.o main.o$/;"	m
+OUTBUFSIZE	lib/printf.c	9;"	d	file:
+PCLK	s3c2440.h	149;"	d
+PDIV	s3c2440.h	28;"	d
+PLUS	lib/vsprintf.c	142;"	d	file:
+PRIORITY	s3c2440.h	90;"	d
+READ	s3c2440.h	165;"	d
+REFCNT	lowlevel_init.S	/^				      REFCNT = 2^11 + 1 - 7.8125*100 = 1268 = 0x4F4 $/;"	d
+REFCNT	lowlevel_init.S	/^				      REFCNT = 2^11 + 1 - 7.8125*12 = 1955 = 0x7A3  $/;"	d
+REFCNT	lowlevel_init.S	/^#define REFCNT			(0x4F4) $/;"	d
+REFEN	lowlevel_init.S	/^#define REFEN			(0x1) \/* Refresh enable *\/$/;"	d
+RX_READY	s3c2440.h	154;"	d
+S3C2440_CLOCK	s3c2440.h	/^}\/*__attribute__((__packed__)) *\/S3C2440_CLOCK;$/;"	t	typeref:struct:__anon1
+S3C2440_CLOCK_BASE	s3c2440.h	26;"	d
+S3C2440_Get_CLOCK_Base	s3c2440.h	/^static inline S3C2440_CLOCK * const S3C2440_Get_CLOCK_Base(void)$/;"	f
+S3C2440_IIC	IIC.h	/^}\/* __attribute__((__packed__)) *\/S3C2440_IIC;$/;"	t	typeref:struct:__anon4
+S3C2440_NAND_BASE	s3c2440.h	59;"	d
+S3C2440_NAND_REG	s3c2440.h	/^} S3C2440_NAND_REG;$/;"	t	typeref:struct:__anon2
+S3C2440_REG32	s3c2440.h	/^typedef volatile u32             S3C2440_REG32;	$/;"	t
+S3C2440_REG8	s3c2440.h	/^typedef volatile u8              S3C2440_REG8;$/;"	t
+SCKE_EN	lowlevel_init.S	/^#define SCKE_EN			(0x1) \/* SDRAM power down mode enable *\/$/;"	d
+SCLK_EN	lowlevel_init.S	/^#define SCLK_EN			(0x1) \/* SCLK is active only during the access *\/$/;"	d
+SDIV	s3c2440.h	29;"	d
+SIGN	lib/vsprintf.c	141;"	d	file:
+SI_TYPE_SIZE	include/gcclib.h	5;"	d
+SItype	include/gcclib.h	/^typedef          int SItype     __attribute__ ((mode (SI)));$/;"	t
+SPACE	lib/vsprintf.c	143;"	d	file:
+SPECIAL	lib/vsprintf.c	145;"	d	file:
+SRCPND	s3c2440.h	87;"	d
+SUBSRCPND	s3c2440.h	93;"	d
+TACLS	s3c2440.h	61;"	d
+TARGET	Makefile	/^TARGET := IIC_EEPROM$/;"	m
+TM	lowlevel_init.S	/^#define TM			(0x0) \/* Test mode - Mode register set (Fixed) *\/$/;"	d
+TREFMD	lowlevel_init.S	/^#define TREFMD			(0x0) \/* CBR\/Auto Refresh *\/$/;"	d
+TWRPH0	s3c2440.h	62;"	d
+TWRPH1	s3c2440.h	63;"	d
+TX_READY	s3c2440.h	153;"	d
+Trp	lowlevel_init.S	/^#define Trp				(0x0) \/* SDRAM RAS pre-charge Time - 2 clocks *\/$/;"	d
+Tsrc	lowlevel_init.S	/^#define Tsrc			(0x3) \/* SDRAM Semi Row cycle time - 7 clocks *\/$/;"	d
+UART_BAUDRATE	s3c2440.h	151;"	d
+UART_CLOCK	s3c2440.h	150;"	d
+UBRDIV0	s3c2440.h	143;"	d
+UBRDIV1	s3c2440.h	144;"	d
+UBRDIV2	s3c2440.h	145;"	d
+UCON0	s3c2440.h	114;"	d
+UCON1	s3c2440.h	115;"	d
+UCON2	s3c2440.h	116;"	d
+UDBG_BADABORT	include/system.h	124;"	d
+UDBG_BUS	include/system.h	126;"	d
+UDBG_SEGV	include/system.h	125;"	d
+UDBG_SYSCALL	include/system.h	123;"	d
+UDBG_UNDEFINED	include/system.h	122;"	d
+UDItype	include/gcclib.h	/^typedef unsigned int UDItype    __attribute__ ((mode (DI)));$/;"	t
+UFCON0	s3c2440.h	119;"	d
+UFCON1	s3c2440.h	120;"	d
+UFCON2	s3c2440.h	121;"	d
+UINT_MAX	include/kernel.h	3;"	d
+ULCON0	s3c2440.h	109;"	d
+ULCON1	s3c2440.h	110;"	d
+ULCON2	s3c2440.h	111;"	d
+ULONG_MAX	include/kernel.h	6;"	d
+UMCON0	s3c2440.h	124;"	d
+UMCON1	s3c2440.h	125;"	d
+UPLLCON	s3c2440.h	/^	S3C2440_REG32 UPLLCON;$/;"	m	struct:__anon1
+UQItype	include/gcclib.h	/^typedef unsigned int UQItype    __attribute__ ((mode (QI)));$/;"	t
+URXH0_L	s3c2440.h	138;"	d
+URXH1_L	s3c2440.h	139;"	d
+URXH2_L	s3c2440.h	140;"	d
+USItype	include/gcclib.h	/^typedef unsigned int USItype    __attribute__ ((mode (SI)));$/;"	t
+UTRSTAT0	s3c2440.h	128;"	d
+UTRSTAT1	s3c2440.h	129;"	d
+UTRSTAT2	s3c2440.h	130;"	d
+UTXH0_L	s3c2440.h	133;"	d
+UTXH1_L	s3c2440.h	134;"	d
+UTXH2_L	s3c2440.h	135;"	d
+WBL	lowlevel_init.S	/^#define WBL			(0x0) \/* Write burst length - Burst (Fixed) *\/$/;"	d
+WRITE	s3c2440.h	164;"	d
+ZEROPAD	lib/vsprintf.c	140;"	d	file:
+_ADNBND	lib/vsprintf.h	22;"	d
+_AUPBND	lib/vsprintf.h	21;"	d
+_C	include/ctype.h	9;"	d
+_D	include/ctype.h	8;"	d
+_L	include/ctype.h	7;"	d
+_P	include/ctype.h	10;"	d
+_PRINTF_H	lib/printf.h	3;"	d
+_S	include/ctype.h	11;"	d
+_SIZE_T	include/types.h	10;"	d
+_SP	include/ctype.h	13;"	d
+_STDIO_H	include/stdio.h	3;"	d
+_TPYES_H	include/types.h	3;"	d
+_U	include/ctype.h	6;"	d
+_VALIST	include/stdio.h	8;"	d
+_VALIST	lib/vsprintf.h	13;"	d
+_X	include/ctype.h	12;"	d
+__ASM_ARM_DIV64	lib/div64.h	2;"	d
+__ASM_ARM_SYSTEM_H	include/system.h	2;"	d
+__IIC_H__	IIC.h	3;"	d
+__LED_H__	led.h	3;"	d
+__LINUX_ARM_ARCH__	lib/div64.S	/^#define __LINUX_ARM_ARCH__  1$/;"	d
+__LINUX_ARM_ARCH__	lib/lib1funcs.S	/^#define __LINUX_ARM_ARCH__  1$/;"	d
+__S3C2440_H__	s3c2440.h	3;"	d
+__UART_H__	uart.h	3;"	d
+___strtok	lib/string.c	/^char * ___strtok;$/;"	v
+__asmeq	include/system.h	68;"	d
+__asmeq	lib/div64.h	30;"	d
+__ismask	include/ctype.h	17;"	d
+__muldi3	lib/muldi3.c	/^__muldi3 (DItype u, DItype v)$/;"	f
+__tolower	include/ctype.h	/^static inline unsigned char __tolower(unsigned char c)$/;"	f
+__toupper	include/ctype.h	/^static inline unsigned char __toupper(unsigned char c)$/;"	f
+__umulsidi3	lib/muldi3.c	56;"	d	file:
+__xchg	include/system.h	/^static inline unsigned long __xchg(unsigned long x, volatile void *ptr, int size)$/;"	f
+__xh	lib/div64.h	23;"	d
+__xh	lib/div64.h	27;"	d
+__xl	lib/div64.h	24;"	d
+__xl	lib/div64.h	26;"	d
+_bnd	lib/vsprintf.h	28;"	d
+_ctype	lib/ctype.c	/^unsigned char _ctype[] = {$/;"	v
+_data_abort	start.S	/^_data_abort:$/;"	l
+_fiq	start.S	/^_fiq:$/;"	l
+_int_return	start.S	/^_int_return:$/;"	l
+_irq	start.S	/^_irq:$/;"	l
+_prefetch_abort	start.S	/^_prefetch_abort:$/;"	l
+_reserved	start.S	/^_reserved:$/;"	l
+_start	start.S	/^_start:$/;"	l
+_swi	start.S	/^_swi:$/;"	l
+_undefined_instruction	start.S	/^_undefined_instruction:$/;"	l
+bcopy	lib/string.c	/^void bcopy(const void *src, void *dest, size_t count)$/;"	f
+clear_bss	init.c	/^void clear_bss(void)$/;"	f
+clock_init	init.c	/^void clock_init(void)$/;"	f
+data	IIC.h	/^    unsigned char *data;      \/\/ buffer$/;"	m	struct:__anon4
+do_IIC_ISR	IIC_handler.c	/^void do_IIC_ISR(void)$/;"	f
+do_div	lib/div64.h	32;"	d
+do_k2	key_handler.c	/^void do_k2(void) $/;"	f
+do_k3	key_handler.c	/^void do_k3(void)$/;"	f
+do_k4	key_handler.c	/^void do_k4(void)$/;"	f
+do_k5	key_handler.c	/^void do_k5(void)$/;"	f
+do_k6	key_handler.c	/^void do_k6(void)$/;"	f
+do_k7	key_handler.c	/^void do_k7(void)$/;"	f
+eeprom_read	eeprom.c	/^unsigned char eeprom_read(unsigned char address)$/;"	f
+eeprom_write	eeprom.c	/^void eeprom_write(unsigned char address, unsigned char data)$/;"	f
+finish_arch_switch	include/system.h	157;"	d
+finish_arch_switch	include/system.h	169;"	d
+g_S3C2440_IIC	IIC.h	/^S3C2440_IIC g_S3C2440_IIC;$/;"	v
+g_pcInBuf	lib/printf.c	/^static char g_pcInBuf[INBUFSIZE];$/;"	v	file:
+g_pcOutBuf	lib/printf.c	/^static char g_pcOutBuf[OUTBUFSIZE];$/;"	v	file:
+get_cr	include/system.h	110;"	d
+high	include/gcclib.h	/^  struct DIstruct {SItype high, low;};$/;"	m	struct:DIstruct
+high	include/gcclib.h	/^  struct DIstruct {SItype low, high;};$/;"	m	struct:DIstruct
+infinite_loop	start.S	/^infinite_loop:$/;"	l
+irq_init	init.c	/^void irq_init(void)$/;"	f
+irq_init_return	start.S	/^irq_init_return:$/;"	l
+irqs_disabled	include/system.h	303;"	d
+isalnum	include/ctype.h	19;"	d
+isalpha	include/ctype.h	20;"	d
+isascii	include/ctype.h	31;"	d
+iscntrl	include/ctype.h	21;"	d
+isdigit	include/ctype.h	22;"	d
+isgraph	include/ctype.h	23;"	d
+islower	include/ctype.h	24;"	d
+isprint	include/ctype.h	25;"	d
+ispunct	include/ctype.h	26;"	d
+isspace	include/ctype.h	27;"	d
+isupper	include/ctype.h	28;"	d
+isxdigit	include/ctype.h	29;"	d
+key_interrupt_init	init.c	/^static void key_interrupt_init(void)$/;"	f	file:
+led_all_off	led.c	/^void led_all_off(void)$/;"	f
+led_all_on	led.c	/^void led_all_on(void)$/;"	f
+led_off	led.c	/^void led_off(int num)$/;"	f
+led_on	led.c	/^void led_on(int num)$/;"	f
+ll	include/gcclib.h	/^  DItype ll;$/;"	m	union:__anon3
+local_fiq_disable	include/system.h	201;"	d
+local_fiq_disable	include/system.h	269;"	d
+local_fiq_enable	include/system.h	200;"	d
+local_fiq_enable	include/system.h	254;"	d
+local_irq_disable	include/system.h	199;"	d
+local_irq_disable	include/system.h	239;"	d
+local_irq_enable	include/system.h	198;"	d
+local_irq_enable	include/system.h	224;"	d
+local_irq_restore	include/system.h	296;"	d
+local_irq_save	include/system.h	190;"	d
+local_irq_save	include/system.h	208;"	d
+local_save_flags	include/system.h	286;"	d
+low	include/gcclib.h	/^  struct DIstruct {SItype high, low;};$/;"	m	struct:DIstruct
+low	include/gcclib.h	/^  struct DIstruct {SItype low, high;};$/;"	m	struct:DIstruct
+main	main.c	/^int main(void)$/;"	f
+mb	include/system.h	136;"	d
+memchr	lib/string.c	/^void *memchr(const void *s, int c, size_t n)$/;"	f
+memcmp	lib/string.c	/^int memcmp(const void * cs,const void * ct,size_t count)$/;"	f
+memcpy	lib/string.c	/^void * memcpy(void * dest,const void *src,size_t count)$/;"	f
+memmove	lib/string.c	/^void * memmove(void * dest,const void *src,size_t count)$/;"	f
+memscan	lib/string.c	/^void * memscan(void * addr, int c, size_t size)$/;"	f
+memset	lib/string.c	/^void * memset(void * s,int c,size_t count)$/;"	f
+mode	IIC.h	/^	volatile int mode;        \/\/ transmission mode$/;"	m	struct:__anon4
+name	lib/div64.S	/^  name:$/;"	l
+name	lib/lib1funcs.S	/^  name:$/;"	l
+nand_deselect_chip	nand.c	/^void nand_deselect_chip(void)$/;"	f
+nand_init	init.c	/^void nand_init(void)$/;"	f
+nand_read	nand.c	/^int nand_read(unsigned char *buf, unsigned long start_addr, int size)$/;"	f
+nand_reset	nand.c	/^void nand_reset(void)$/;"	f
+nand_select_chip	nand.c	/^void nand_select_chip(void)$/;"	f
+nop	include/system.h	142;"	d
+numOfData	IIC.h	/^	volatile int numOfData;   \/\/ buffer size$/;"	m	struct:__anon4
+number	lib/vsprintf.c	/^static char * number(char * buf, char * end, unsigned long long num, int base, int size, int precision, int type)$/;"	f	file:
+objs	lib/Makefile	/^objs := div64.o lib1funcs.o ctype.o muldi3.o printf.o string.o vsprintf.o$/;"	m
+pos	IIC.h	/^	volatile int pos;         \/\/ the position where the data to be transmitted$/;"	m	struct:__anon4
+prepare_arch_switch	include/system.h	151;"	d
+prepare_arch_switch	include/system.h	168;"	d
+printf	lib/printf.c	/^int printf(const char *fmt, ...)$/;"	f
+putchar	lib/string.c	/^int putchar(int c)$/;"	f
+puts	lib/string.c	/^int puts(const char *s)$/;"	f
+read_barrier_depends	include/system.h	139;"	d
+read_cpuid	include/system.h	50;"	d
+read_data	nand.c	/^unsigned char read_data(void)$/;"	f
+reset	start.S	/^reset:$/;"	l
+rmb	include/system.h	137;"	d
+s	include/gcclib.h	/^  struct DIstruct s;$/;"	m	union:__anon3	typeref:struct:__anon3::DIstruct
+s3c2440_nand_deselect_chip	nand.c	/^static void s3c2440_nand_deselect_chip(void)$/;"	f	file:
+s3c2440_nand_reset	nand.c	/^static void s3c2440_nand_reset(void)$/;"	f	file:
+s3c2440_nand_select_chip	nand.c	/^static void s3c2440_nand_select_chip(void)$/;"	f	file:
+s3c2440_read_data	nand.c	/^static unsigned char s3c2440_read_data(void)$/;"	f	file:
+s3c2440_wait_idle	nand.c	/^static void s3c2440_wait_idle(void)$/;"	f	file:
+s3c2440_write_addr_lp	nand.c	/^static void s3c2440_write_addr_lp(unsigned int addr)$/;"	f	file:
+s3c2440_write_cmd	nand.c	/^static void s3c2440_write_cmd(int cmd)$/;"	f	file:
+scanf	lib/printf.c	/^int scanf(const char * fmt, ...)$/;"	f
+scnprintf	lib/vsprintf.c	/^int scnprintf(char * buf, size_t size, const char *fmt, ...)$/;"	f
+sdram_init	lowlevel_init.S	/^sdram_init:$/;"	l
+set_cr	include/system.h	105;"	d
+set_mb	include/system.h	140;"	d
+set_wmb	include/system.h	141;"	d
+simple_strtol	lib/vsprintf.c	/^long simple_strtol(const char *cp,char **endp,unsigned int base)$/;"	f
+simple_strtoll	lib/vsprintf.c	/^long long simple_strtoll(const char *cp,char **endp,unsigned int base)$/;"	f
+simple_strtoul	lib/vsprintf.c	/^unsigned long simple_strtoul(const char *cp,char **endp,unsigned int base)$/;"	f
+simple_strtoull	lib/vsprintf.c	/^unsigned long long simple_strtoull(const char *cp,char **endp,unsigned int base)$/;"	f
+size_t	include/types.h	/^typedef unsigned int size_t;$/;"	t
+skip_atoi	lib/vsprintf.c	/^static int skip_atoi(const char **s)$/;"	f	file:
+smp_mb	include/system.h	313;"	d
+smp_mb	include/system.h	320;"	d
+smp_read_barrier_depends	include/system.h	316;"	d
+smp_read_barrier_depends	include/system.h	323;"	d
+smp_rmb	include/system.h	314;"	d
+smp_rmb	include/system.h	321;"	d
+smp_wmb	include/system.h	315;"	d
+smp_wmb	include/system.h	322;"	d
+snprintf	lib/vsprintf.c	/^int snprintf(char * buf, size_t size, const char *fmt, ...)$/;"	f
+sprintf	lib/vsprintf.c	/^int sprintf(char * buf, const char *fmt, ...)$/;"	f
+sscanf	lib/vsprintf.c	/^int sscanf(const char * buf, const char * fmt, ...)$/;"	f
+status	IIC.h	/^	volatile int status;      \/\/ transmission status: read\/write$/;"	m	struct:__anon4
+strcat	lib/string.c	/^char * strcat(char * dest, const char * src)$/;"	f
+strchr	lib/string.c	/^char * strchr(const char * s, int c)$/;"	f
+strcmp	lib/string.c	/^int strcmp(const char * cs,const char * ct)$/;"	f
+strcpy	lib/string.c	/^char * strcpy(char * dest,const char *src)$/;"	f
+strlen	lib/string.c	/^size_t strlen(const char * s)$/;"	f
+strncat	lib/string.c	/^char * strncat(char *dest, const char *src, size_t count)$/;"	f
+strncmp	lib/string.c	/^int strncmp(const char * cs,const char * ct,size_t count)$/;"	f
+strncpy	lib/string.c	/^char * strncpy(char * dest,const char *src,size_t count)$/;"	f
+strnicmp	lib/string.c	/^int strnicmp(const char *s1, const char *s2, size_t len)$/;"	f
+strnlen	lib/string.c	/^size_t strnlen(const char * s, size_t count)$/;"	f
+strpbrk	lib/string.c	/^char * strpbrk(const char * cs,const char * ct)$/;"	f
+strrchr	lib/string.c	/^char * strrchr(const char * s, int c)$/;"	f
+strsep	lib/string.c	/^char * strsep(char **s, const char *ct)$/;"	f
+strspn	lib/string.c	/^size_t strspn(const char *s, const char *accept)$/;"	f
+strstr	lib/string.c	/^char * strstr(const char * s1,const char * s2)$/;"	f
+strtok	lib/string.c	/^char * strtok(char * s,const char * ct)$/;"	f
+switch_to	include/system.h	180;"	d
+swp_is_buggy	include/system.h	338;"	d
+tas	include/system.h	99;"	d
+task_running	include/system.h	160;"	d
+task_running	include/system.h	170;"	d
+toascii	include/ctype.h	32;"	d
+tolower	include/ctype.h	48;"	d
+toupper	include/ctype.h	49;"	d
+u32	s3c2440.h	/^typedef unsigned int             u32;$/;"	t
+u8	s3c2440.h	/^typedef unsigned char            u8;$/;"	t
+uart_getchar	uart.c	/^unsigned char uart_getchar(int COM)$/;"	f
+uart_init	uart.c	/^void uart_init(int COM)$/;"	f
+uart_init_return	start.S	/^uart_init_return:$/;"	l
+uart_putchar	uart.c	/^void uart_putchar(int COM, unsigned char ch)$/;"	f
+umul_ppmm	lib/muldi3.c	34;"	d	file:
+unlikely	lib/vsprintf.c	29;"	d	file:
+va_arg	lib/vsprintf.h	29;"	d
+va_end	lib/vsprintf.h	30;"	d
+va_list	include/stdio.h	/^typedef char *va_list;$/;"	t
+va_list	lib/vsprintf.h	/^typedef char *va_list;$/;"	t
+va_start	lib/vsprintf.h	31;"	d
+vectors_high	include/system.h	131;"	d
+vectors_high	include/system.h	133;"	d
+vscnprintf	lib/vsprintf.c	/^int vscnprintf(char *buf, size_t size, const char *fmt, va_list args)$/;"	f
+vsnprintf	lib/vsprintf.c	/^int vsnprintf(char *buf, size_t size, const char *fmt, va_list args)$/;"	f
+vsprintf	lib/vsprintf.c	/^int vsprintf(char *buf, const char *fmt, va_list args)$/;"	f
+vsscanf	lib/vsprintf.c	/^int vsscanf(const char * buf, const char * fmt, va_list args)$/;"	f
+wait_idle	nand.c	/^void wait_idle(void)$/;"	f
+wmb	include/system.h	138;"	d
+word_type	include/gcclib.h	/^typedef          int word_type 	__attribute__ ((mode (__word__)));$/;"	t
+write_addr	nand.c	/^void write_addr(unsigned int addr)$/;"	f
+write_cmd	nand.c	/^void write_cmd(int cmd)$/;"	f
+xchg	include/system.h	96;"	d
+xh	lib/div64.S	/^#define xh r0$/;"	d
+xh	lib/div64.S	/^#define xh r1$/;"	d
+xl	lib/div64.S	/^#define xl r0$/;"	d
+xl	lib/div64.S	/^#define xl r1$/;"	d
+yh	lib/div64.S	/^#define yh r2$/;"	d
+yh	lib/div64.S	/^#define yh r3$/;"	d
+yl	lib/div64.S	/^#define yl r2$/;"	d
+yl	lib/div64.S	/^#define yl r3$/;"	d

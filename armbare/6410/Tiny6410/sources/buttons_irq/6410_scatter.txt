@@ -1,0 +1,36 @@
+;/**************************************************************************************
+;* 
+;*	Project Name : S3C6400 Validation
+;*
+;*	Copyright 2006 by Samsung Electronics, Inc.
+;*	All rights reserved.
+;*
+;*	Project Description :
+;*		This software is only for validating functions of the S3C6400.
+;*		Anybody can use this software without our permission.
+;*  
+;*--------------------------------------------------------------------------------------
+;* 
+;*	File Name : 6410_scatter.txt
+;*  
+;*	File Description : Scatterload structure for downloading image with Debugger/
+;*
+;*	Author : Heemyung.Noh
+;*	Dept. : AP Development Team
+;*	Created Date : 2007/09/04
+;* 
+;*	History
+;*	- Created(Heemyung.Noh 2007/09/04)
+;*  
+;**************************************************************************************/
+
+DRAM 0x50200000
+{
+  CODE 0x50200000
+  {
+    startup.o (Init,+FIRST)
+ 
+    * (+RO)
+    * (+RW, +ZI)
+  }
+}

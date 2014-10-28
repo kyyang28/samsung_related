@@ -1,0 +1,83 @@
+For ways to instantiate I2C devices
+
+METHOD 1:
+	a)	Declare a "i2c_board_info" structure which contains the name and the device 
+		address.
+
+		struct i2c_board_info {
+			char		type[I2C_NAME_SIZE];	/* type is name */
+			unsigned short	flags;
+			unsigned short	addr;				/* device address */
+			void		*platform_data;
+			struct dev_archdata	*archdata;
+		#ifdef CONFIG_OF
+			struct device_node *of_node;
+		#endif
+			int		irq;
+		};
+
+		
+	b)	Invoking "i2c_register_board_info"
+						list_add_tail(&devinfo->list, &__i2c_board_list);
+	
+		int __init i2c_register_board_info(int busnum,
+				struct i2c_board_info const *info, unsigned len)
+		{
+			int status;
+
+			down_write(&__i2c_board_lock);
+
+			/* dynamic bus numbers will be assigned after the last static one */
+			if (busnum >= __i2c_first_dynamic_bus_num)
+				__i2c_first_dynamic_bus_num = busnum + 1;
+
+			for (status = 0; len; len--, info++) {
+				struct i2c_devinfo	*devinfo;
+
+				devinfo = kzalloc(sizeof(*devinfo), GFP_KERNEL);
+				if (!devinfo) {
+					pr_debug("i2c-core: can't register boardinfo!\n");
+					status = -ENOMEM;
+					break;
+				}
+
+				devinfo->busnum = busnum;
+				devinfo->board_info = *info;
+				list_add_tail(&devinfo->list, &__i2c_board_list);
+			}
+
+			up_write(&__i2c_board_lock);
+
+			return status;
+		}
+
+		The purpose of "i2c_register_board_info" function is inserting the 
+		"board_info" structure to the linked list "__i2c_board_list"
+
+		Question1:	When do we use this "__i2c_board_list" linked list ?
+
+		Answer1: 	(Search __i2c_board_list in source insight, we have)
+					In the file I2c-core.c, the function "i2c_scan_static_board_info" using 
+					this "__i2c_board_list". 
+					This "i2c_scan_static_board_info" function simply traverse the 
+					whole "__i2c_board_list" list and invoking "i2c_new_device" 
+					function which adding the I2C device to the device list.
+			
+		Question2:	Who invoking the "i2c_scan_static_board_info" function?
+
+		Answer2:	Since "i2c_scan_static_board_info" is a static function, so 
+					it must be invoked within the file "I2c-core.c".
+					As a result, "i2c_register_adapter" function invokes it("i2c_scan_static_board_info").
+
+		Usage restriction:
+			We must provide the "i2c_board_info" structure before invoking the 
+			"i2c_register_adapter" function.
+
+			Therefore, this method is not suitable for the dynamic installation 
+			such as "insmod/rmmod" modules.
+
+
+METHOD 2:	Invoking "i2c_new_device" or "i2c_new_probed_device" explicitly.
+
+	
+

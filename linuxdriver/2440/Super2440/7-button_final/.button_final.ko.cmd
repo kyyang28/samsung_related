@@ -1,0 +1,1 @@
+cmd_/home/kyyang/yan/drivers/7-button_final/button_final.ko := arm-linux-ld -EL -r  -T /home/kyyang/yan/kernel/linux-2.6.38_Super/scripts/module-common.lds --build-id  -o /home/kyyang/yan/drivers/7-button_final/button_final.ko /home/kyyang/yan/drivers/7-button_final/button_final.o /home/kyyang/yan/drivers/7-button_final/button_final.mod.o

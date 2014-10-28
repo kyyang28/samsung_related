@@ -1,0 +1,51 @@
+
+1. Download & Install softwares
+
+sudo apt-get install autoconf
+sudo apt-get install automake
+sudo apt-get install libtool
+
+
+
+
+2. Compilation
+
+tar xzf tslib-1.4.tar.gz
+cd tslib
+./autogen.sh 
+
+mkdir tmp
+echo "ac_cv_func_malloc_0_nonnull=yes" >arm-linux.cache
+./configure --host=arm-linux --cache-file=arm-linux.cache --prefix=$(pwd)/tmp
+make
+make install
+
+3. Copy to rootfs
+cd tmp
+cp * -rf /home/kyyang/yan/nfs/mini2440rootfs  
+
+
+4. Usage
+
+4.1 Firstly, install the ts and lcd drivers
+		(mini2440_ts_dev.ko, mini2440_ts_drv.ko, mini2440_lcd_dev.ko, mini2440_lcd_drv.ko)
+
+4.2 On evaluation board 
+		Modify the first line of /etc/ts.conf (get rid of the first # and space)
+		# module_raw input
+		¸ÄÎª£º
+		module_raw input
+
+4.3 
+//export TSLIB_TSDEVICE=/dev/input/event0
+export TSLIB_TSDEVICE=/dev/event1
+export TSLIB_TSDEVICE=/dev/event0
+export TSLIB_CALIBFILE=/etc/pointercal
+export TSLIB_CONFFILE=/etc/ts.conf
+export TSLIB_PLUGINDIR=/lib/ts
+export TSLIB_CONSOLEDEVICE=none
+export TSLIB_FBDEVICE=/dev/fb0
+
+ts_calibrate
+
+ts_test

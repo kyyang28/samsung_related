@@ -1,0 +1,19 @@
+#
+# Makefile for the Linux Journalling Flash File System v2 (JFFS3)
+#
+# JFFS2 Id: Makefile.common,v 1.7 2004/11/03 12:57:38 jwboyer  Exp
+# $Id: Makefile.common,v 3.4 2005/02/09 14:25:14 pavlov Exp $
+#
+
+obj-$(CONFIG_JFFS3_FS) += jffs3.o
+
+jffs3-y	:= compr.o dir.o file.o ioctl.o nodelist.o malloc.o
+jffs3-y	+= read.o nodemgmt.o readinode.o write.o scan.o gc.o
+jffs3-y	+= symlink.o build.o erase.o background.o fs.o writev.o
+jffs3-y	+= super.o debug.o
+
+jffs3-$(CONFIG_JFFS3_FS_WRITEBUFFER)	+= wbuf.o
+jffs3-$(CONFIG_JFFS3_RUBIN)	+= compr_rubin.o
+jffs3-$(CONFIG_JFFS3_RTIME)	+= compr_rtime.o
+jffs3-$(CONFIG_JFFS3_ZLIB)	+= compr_zlib.o
+jffs3-$(CONFIG_JFFS3_SUMMARY)   += summary.o

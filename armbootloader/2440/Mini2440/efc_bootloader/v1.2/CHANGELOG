@@ -1,0 +1,19 @@
+
+Author: Charles Yang <charlesyang28@gmail.com>
+Date:	Thur Oct 4 01:01:55 2012
+
+    Added System.c file in order to enable icache.
+    Added icache_enable() function in Board.c file at line 90.
+
+
+Author: Charles Yang <charlesyang28@gmail.com>
+Date:	Thur Oct 4 11:44:16 2012
+
+    Added Lowlevel_init.S file to initialize SDRAM.
+    Added Serial.c file to initialize uart0.
+    Added Nand.c file to operate on nandflash.
+    Added Mini2440_regs.h file including the s3c2440 SoC registers.
+    Added a bunch of functions to display the banner, efc_info, etc in Board.c.
+    Modified Makefile to compile the following files:
+        lowlevel_init.o serial.o nand.o
+
